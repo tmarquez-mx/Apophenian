@@ -15,11 +15,11 @@ En este Layout se busca concentrar todo, particularmente las ideas y que no se e
 ## Programas parecidos y/o que sirvieron de inspiración. Influencias
 Bullet Journal; Fichero de Luhmann; Programas de procesamiento cualitativo tipo Atlas.ti y MAXQDA (memos, codificación, especialmente MAXQDA);  Scrivener (escritura de no-ficción); Kit Escenari (trabajo con fichas); CELTX (guiones); Teoría Fundamentada; Google Keep; Desing Thinking; Liquid Text; Mis alumnos;
 Yo merita; Notion; Trello; Evernote; Obsidian. 
+## ¿Por qué el nombre Apophenian?
+> La apofenia (/æpoʊˈfiːniə/) es la tendencia a percibir erróneamente conexiones significativas entre cosas no relacionadas. El término (alemán: Apophänie) fue acuñado por el psiquiatra Klaus Conrad en su publicación de 1958 sobre las etapas iniciales de la esquizofrenia.
+Creemos que la tendencia no es una condición mental, sino un don de la imaginación sociológica que todos tenemos y/o podemos desarrollar.
 
-
-
-
-
+Así, **Apophenian**  proporciona organización para la imaginación que relaciona.
 
 VENTAJAS
 
