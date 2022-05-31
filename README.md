@@ -8,7 +8,14 @@ Conceptualizar es dar orden y sentido a partir de observaciones de regularidades
 - Organizar (planear)
 - Escribir
 
-*¿Por qué es necesario?*
+## ¿Por qué es necesario?
+*"Your mind is for having ideas, not holding them"* (David Allen)
+Porque no hay tiempo y se tienen los insumos en muchos lugares distintos.
+En este Layout se busca concentrar todo, particularmente las ideas y que no se escapen o queden enterradas en papel.
+## Programas parecidos y/o que sirvieron de inspiración. Influencias
+Bullet Journal; Fichero de Luhmann; Programas de procesamiento cualitativo tipo Atlas.ti y MAXQDA (memos, codificación, especialmente MAXQDA);  Scrivener (escritura de no-ficción); Kit Escenari (trabajo con fichas); CELTX (guiones); Teoría Fundamentada; Google Keep; Desing Thinking; Liquid Text; Mis alumnos;
+Yo merita; Notion; Trello; Evernote; Obsidian. 
+
 
 
 
