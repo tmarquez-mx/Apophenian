@@ -4,10 +4,11 @@ Desarrollo de una plantilla para registro, estructuración y comunicación de pr
 
 Bajo un concepto PAD (pensando analógico en plataforma digital), Apophenian es un layout para pensar, no sólo organizar, no solo escribir; Sino para conceptualizar. Es decir, para organizar todos los insumos de una investigación en conceptos. Los insumos pueden ser teórico o empíricos. Provenientes de fuentes primarias o secundarias. Los conceptos pueden ser o no, emergentes, semi-emergentes o pre-existentes.
 Conceptualizar es dar orden y sentido a partir de observaciones de regularidades o patrones. Se consideran tres momentos:
-	- Pensar (agrupar, clasificar, saturar, conceptualizar)
-	- Organizar (planear)
-	- Escribir
+- Pensar (agrupar, clasificar, saturar, conceptualizar)
+- Organizar (planear)
+- Escribir
 
+*¿Por qué es necesario?*
 
 
 
