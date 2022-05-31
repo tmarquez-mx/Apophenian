@@ -18,3 +18,7 @@ DESVENTAJAS
 
 
 ![imagen](https://user-images.githubusercontent.com/69394840/171135899-bf41ca92-86af-4c51-9acd-6fa8107b88bd.png)
+
+# Formato ficha teórica
+
+<img width="412" alt="Captura de Pantalla 2022-05-31 a la(s) 15 15 44" src="https://user-images.githubusercontent.com/69394840/171277099-1897c36b-5028-4853-a6c9-7eba5566c0f4.png">
