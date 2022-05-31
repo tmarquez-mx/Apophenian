@@ -41,6 +41,6 @@ DESVENTAJAS
 # Formato ficha teórica
 
 <img width="412" alt="Captura de Pantalla 2022-05-31 a la(s) 15 15 44" src="https://user-images.githubusercontent.com/69394840/171277099-1897c36b-5028-4853-a6c9-7eba5566c0f4.png">
----
+***
 
 Meses después al conocer a profundidad programas con Obsidian basados en la idea del cerebro digital, el Zettelkasten y la mente expandida, el Apophenian fue mejorado. Ahora está más clara también la metodología de trabajo al lograr una mayor integración con Zotero gracias a pluguins como mdnotes y BibTex.... más información, pronto.
