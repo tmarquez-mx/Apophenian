@@ -45,8 +45,6 @@ Usar en el título una nomenclatura como tema y time stamp
 Se puede también hacer un índice de fichas
 No se fichan obras, eso se hace en el Zotero, pero se pueden relacionar
 A través por ejemplo de citation key de la ficha en zotero (para el campo de "referencias")
-![imagen](https://user-images.githubusercontent.com/69394840/171936309-cca82139-ab44-43dd-b152-83f3b30d8de8.png)
-
 <img width="412" alt="Captura de Pantalla 2022-05-31 a la(s) 15 15 44" src="https://user-images.githubusercontent.com/69394840/171277099-1897c36b-5028-4853-a6c9-7eba5566c0f4.png">
 # Formato memo
 Los memos se usarán siempre para pensamientos relacionales  de un orden conceptual mayor a las relaciones meramente referenciales que puedan identificarse en las fichas. 
