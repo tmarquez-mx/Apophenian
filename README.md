@@ -55,3 +55,13 @@ Los memos se usarán siempre para pensamientos relacionales  de un orden concept
 
 
 Meses después al conocer a profundidad programas con Obsidian basados en la idea del cerebro digital, el Zettelkasten y la mente expandida, el Apophenian fue mejorado. Ahora está más clara también la metodología de trabajo al lograr una mayor integración con Zotero gracias a pluguins como mdnotes y BibTex.... más información, pronto.
+
+# Nueva estructura (siguiendo principios de Second Brain ó Cerebro digital)
+La estructura principal es:
+	Capturar
+	Procesar
+	Aprender
+	Compartir
+A partirn de ahí pueden personalizarse de acuerdo a las necesidades y particularidades de la investigación, los componentes internos como se muestra en la imagen:
+<img width="220" alt="Captura de Pantalla 2022-06-04 a la(s) 23 53 34" src="https://user-images.githubusercontent.com/69394840/172035608-57be64ce-31f2-42ad-a854-06ba7865e778.png">
+
