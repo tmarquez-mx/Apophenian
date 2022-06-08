@@ -63,5 +63,6 @@ La estructura principal es:
 	Aprender
 	Compartir
 A partir de ahí pueden personalizarse de acuerdo a las necesidades y particularidades de la investigación, los componentes internos como se muestra en la imagen:
+
 <img width="220" alt="Captura de Pantalla 2022-06-04 a la(s) 23 53 34" src="https://user-images.githubusercontent.com/69394840/172035608-57be64ce-31f2-42ad-a854-06ba7865e778.png">
 
