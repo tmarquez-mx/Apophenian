@@ -1,7 +1,7 @@
 # APOPHENIAN
 Desarrollo de una plantilla para registro, estructuración y comunicación de procesos de trabajo académico 
 <img width="1184" alt="Captura de Pantalla 2022-05-31 a la(s) 4 08 54" src="https://user-images.githubusercontent.com/69394840/171137439-e1d4d473-2d5d-4891-966f-a97e315d6c4a.png">
-Apophenian es un layout para pensar, no sólo organizar y analizar insumos de investigación. Se estrutura bajo la idea de modulación y organización. 
+Apophenian es un layout para organizar y analizar insumos de investigación. Se estrutura bajo la idea de modulación y organización. 
 Se consideran tres momentos en el trabajo de investigación (que pueden secuenciarse o traslaparse)
 - Pensar (agrupar, clasificar, saturar, conceptualizar)
 - Organizar (planear)
