@@ -26,7 +26,7 @@ Esta es una [[Nuevo paradigma epistémico\|Nuevo paradigma epistémico]] donde s
 
 ## Propuesta
 
-Se propone [[Apophenian\|Apophenian]] como una materia de carácter práctico donde el estudiante lo mismo desarrollará un [[zettelkasten\|zettelkasten]] analógico con tarjetas y plumas a lo largo del semestre, que usará aplicaciones digitales apoyadas en IA para analizar datos cualitativos. En el camino se espera que desarrolle habilidades cognitivas y de organización tales como:
+Se propone [[Apophenian 1.0\|Apophenian 1.0]] como una materia de carácter práctico donde el estudiante lo mismo desarrollará un [[zettelkasten\|zettelkasten]] analógico con tarjetas y plumas a lo largo del semestre, que usará aplicaciones digitales apoyadas en IA para analizar datos cualitativos. En el camino se espera que desarrolle habilidades cognitivas y de organización tales como:
 
 |   |   |   |
 |---|---|---|
@@ -36,7 +36,9 @@ Se propone [[Apophenian\|Apophenian]] como una materia de carácter práctico do
 
 La materia busca que mediante la escritura de notas y de memos el estudiante se entrene en el análisis de datos. Esto es en transitar con rigor y calidad de lo particular (descripción) a lo general (patrones); de la transcripción (datocéntrica) a la traducción (abduccionista), es decir en ir del dato a la teorización. A esta propuesta la denomino momentáneamente **Zettelphenian** (o Apophenian 2.0) por combinar el método Zettelkasten de Niklas Luhmann que busca la emergencia de preguntas y reflexiones a partir de la conexión de ideas cuidadosamente registradas, y de Apohenian, un sistema de trabajo que buscó dotar a mis tesistas de una organización para documentar y eficientar los procesos de trabajo propios de la escritura de tesis. En este segundo momento, Apophenian incorpora la escritura de memos (_memoing_) proveniente de la Teoría Fundamentada, abandonando su clasificación por tipos y explorando una secuencialidad por niveles de abstracción. 
 
+
 ![Pasted image 20231015165419.png](/img/user/Im%C3%A1genes/Pasted%20image%2020231015165419.png)
+
 
 
 Como colorario, el estudiante aprenderá además principios básicos del análisis de datos cualitativos como operaciones que producen información que puesta en relación con otras piezas de datos empíricos y postulados teóricos, constituyen la sustancia ideacional que recorrerá su zettelkasten (archivo) para general observaciones de un orden abstracto mayor o teorizaciones.
@@ -50,4 +52,10 @@ Como colorario, el estudiante aprenderá además principios básicos del anális
 
 -        Habrá un uso intensivo de tecnología digital por lo que se aconseja llevar a clase una computadora óptima con capacidad de batería de al menos 3 horas.
 
+# Perfil
+
 Esta materia es recomendable para estudiantes de los primeros semestres de posgrados en las áreas de sociales y humanidades, que estén por iniciar la documentación teórica y/o empírica de sus tesis. Preferentemente para aquellos cuya investigación tenga un componente cualitativo importante.
+
+
+---
+>Materia amigable con software libre y ciencia abierta
