@@ -1,3 +1,169 @@
+# Apophenian.Conectar ideas. Hacer visible el proceso. Construir confianza.
+
+**[Una nueva aproximación a la escritura académica]**
+
+Apophenian es un procesador de escritura académica basado en inteligencia artificial, diseñado para acompañar la construcción de tesis, artículos científicos y otros productos de investigación.
+
+Su punto de partida es que la escritura académica constituye un proceso de producción de conocimiento y no únicamente un medio para comunicar resultados ya elaborados. En consecuencia, la herramienta no se centra exclusivamente en producir un documento final, sino en apoyar la organización, articulación y documentación del proceso intelectual que conduce a él.
+
+El proyecto Apophenian (que más allá de desarrollar un software) explora cómo un procesador de textos puede convertirse en un artefacto epistémico: un entorno capaz de favorecer nuevas formas de pensar, establecer relaciones conceptuales y hacer visible el razonamiento que sustenta una investigación.
+
+## Fundamentos
+
+**1. La escritura académica no es lineal**
+
+Aunque la mayoría de los procesadores de texto continúan organizando la escritura como una secuencia lineal de páginas y capítulos, numerosos estudios sobre investigación cualitativa y construcción teórica muestran que el conocimiento se desarrolla mediante procesos iterativos de comparación, reorganización, reinterpretación y síntesis.
+
+Durante una investigación, las ideas aparecen antes que su ubicación definitiva. Una categoría puede terminar convirtiéndose en un capítulo; una nota marginal puede transformarse en la tesis central; un argumento puede desplazarse varias veces antes de adquirir su forma final.
+
+Apophenian intenta respetar esta naturaleza dinámica de la escritura.
+
+En este sentido, el proyecto encuentra afinidad con la filosofía de Scrivener, cuya organización por documentos independientes y tablero visual (“corkboard”) representa una de las primeras aproximaciones exitosas a una escritura no lineal. Sin embargo, Apophenian busca extender ese paradigma mediante inteligencia artificial, trazabilidad y visualización de relaciones entre ideas.
+
+También recupera principios del sistema Zettelkasten, particularmente la concepción del conocimiento como una red creciente de notas interconectadas más que como un conjunto jerárquico de documentos.
+
+**2. Analizar significa relacionar**
+
+Una segunda premisa sostiene que analizar consiste, fundamentalmente, en establecer relaciones.
+
+La producción de conocimiento no depende únicamente de clasificar información, sino de descubrir vínculos entre conceptos, teorías, evidencias, observaciones y argumentos.
+
+Esta idea aparece de manera explícita en múltiples metodologías cualitativas contemporáneas. La metodología Gioia, por ejemplo, enfatiza el tránsito iterativo entre evidencia empírica y abstracción conceptual mediante procesos continuos de agrupación y reorganización conceptual (Magnani y Gioia, 2023).
+
+De forma similar, la teorización basada en procesos descrita por Langley (1999) entiende la construcción teórica como una actividad permanente de reorganización temporal y conceptual de los datos.
+
+Apophenian intenta convertir esa actividad relacional en una característica central de la escritura, permitiendo establecer conexiones explícitas entre fragmentos de texto, notas, conceptos, referencias bibliográficas y evidencias.
+
+
+**3. La confianza también se construye**
+
+La incorporación de modelos de lenguaje en la educación superior ha desplazado parte del debate desde la producción de textos hacia la legitimidad de los procesos mediante los cuales dichos textos son construidos.
+
+En ese contexto, Apophenian parte de una tercera premisa:
+
+En una academia atravesada por la inteligencia artificial, construir confianza es tan importante como construir conocimiento.
+
+La propuesta no consiste en ocultar la intervención de la IA, sino en favorecer procesos suficientemente transparentes para que el recorrido intelectual pueda reconstruirse posteriormente.
+
+Las sucesivas versiones de un argumento, las relaciones entre ideas, las decisiones editoriales y las intervenciones realizadas mediante IA constituyen evidencia potencial del trabajo desarrollado durante la investigación.
+
+Esta perspectiva coincide con una tendencia creciente en investigación cualitativa que propone fortalecer la confianza mediante la documentación explícita del proceso analítico, más que únicamente mediante la presentación de resultados finales (Cloutier y Ravasi, 2021).
+
+## Objetivos del proyecto
+
+Apophenian busca desarrollar un entorno donde sea posible:
+
+* escribir sin imponer una estructura lineal desde el inicio;
+* registrar ideas conforme aparecen;
+* reorganizar continuamente la arquitectura del documento;
+* construir redes de relaciones entre conceptos;
+* integrar escritura, notas, referencias bibliográficas y evidencia empírica;
+* documentar el proceso de construcción del conocimiento;
+* favorecer la transparencia del uso de inteligencia artificial;
+* generar productos académicos con mayor trazabilidad.
+
+
+## Estado del proyecto
+
+Estado actual: Demo funcional / Research prototype
+
+Esta versión constituye una prueba de concepto cuyo propósito es explorar nuevas formas de interacción entre personas investigadoras, escritura académica e inteligencia artificial.
+
+No representa todavía una versión estable del software.
+
+
+## Inspiración
+
+Apophenian se inspira en distintas tradiciones de investigación y de escritura, entre ellas:
+
+* la escritura no lineal propuesta por Scrivener;
+* el sistema Zettelkasten de Niklas Luhmann;
+* la investigación cualitativa orientada a procesos;
+* las metodologías de construcción teórica;
+* los principios de trazabilidad y transparencia analítica.
+
+No pretende reemplazar el pensamiento del investigador ni automatizar la producción del conocimiento. Su propósito es proporcionar un entorno donde dicho conocimiento pueda construirse, reorganizarse y hacerse visible.
+
+## Principios de diseño
+
+1. Orientación al proceso
+
+Los procesadores convencionales privilegian el documento final. Apophenian considera que el proceso de escritura forma parte de la investigación y, por ello, registra tiempos, versiones, estados y ritmos de trabajo con la misma relevancia que el conteo de palabras.
+
+2. Escribir es una forma de pensar
+
+La escritura no se limita a registrar ideas previamente formadas: también permite desarrollarlas, examinarlas y transformarlas. Apophenian distingue entre espacios provisionales y de bajo costo, como el corcho y las notas, y espacios de mayor elaboración, como los apartados del manuscrito. La herramienta facilita el tránsito entre ellos sin pérdida de información.
+
+3. La escritura no es lineal
+
+Una tesis se construye mediante avances, interrupciones, retornos y reorganizaciones. Apophenian permite trabajar en cualquier orden y generar entregas sin imponer una secuencia de escritura ajena al proceso real de investigación.
+
+4. La idea es la unidad de trabajo; el documento, la unidad de entrega
+
+La investigación se desarrolla mediante ideas, pero se comunica mediante documentos estructurados. Apophenian administra esta tensión: permite trabajar con piezas independientes y convertirlas progresivamente en capítulos, avances y manuscritos coherentes.
+
+5. El conocimiento es una red
+
+Los conceptos adquieren sentido por las relaciones que establecen con otros conceptos, evidencias, referencias y argumentos. Apophenian busca hacer visibles esas conexiones y utilizar la red como un instrumento para diagnosticar la coherencia del proyecto, no como una representación meramente ilustrativa.
+
+6. El proceso deja evidencia, y esa evidencia pertenece a quien escribe
+
+Las decisiones editoriales, las revisiones y los cambios forman parte del trabajo intelectual. Apophenian registra estas huellas para favorecer la reflexión y el acompañamiento, no la vigilancia. La información del proceso permanece bajo el control de quien investiga y solo se comparte mediante acciones deliberadas.
+
+7. Escribir una tesis es una relación
+
+La dirección de tesis no debe limitarse a evaluar el producto final, sino acompañar su desarrollo. Apophenian busca situar la conversación junto al proceso de escritura, sin convertir el entorno en un sistema de corrección permanente que interrumpa la elaboración del texto. La revisión editorial minuciosa corresponde a momentos y entregas específicos.
+
+8. La inteligencia artificial es una tecnología cognitiva
+
+La inteligencia artificial debe ampliar la capacidad de razonamiento, no sustituir la autoría. Por ello, Apophenian concibe la IA como una instancia que formula preguntas, identifica problemas y ofrece señalamientos, en lugar de producir párrafos listos para copiar. Su intervención debe ser configurable, explícita, documentada y auditable, con prioridad para modelos locales que protejan los borradores.
+
+9. Privacidad y pertenencia
+
+Los borradores son materiales intelectuales en formación y deben permanecer bajo el control de sus autoras y autores. Apophenian prioriza el almacenamiento local, evita la telemetría innecesaria y permite exportar el proyecto completo en un formato portable que pueda conservarse, trasladarse y respaldarse sin depender de un servicio externo.
+
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/32137434-3003-4394-925e-1a8498d69365" />
+
+
+
+## Declaración de uso
+La redacción de este texto fue asistida por ChatGPT 5.6 Pro. 
+
+## Referencias
+
+Ahrens, S. (2022). How to Take Smart Notes (Revised Edition). Sönke Ahrens.
+
+Cloutier, C., & Ravasi, D. (2021). Using tables to enhance trustworthiness in qualitative research. Strategic Organization, 19(1), 113-133. https://doi.org/10.1177/1476127020979329
+
+Langley, A. (1999). Strategies for theorizing from process data. Academy of Management Review, 24(4), 691-710.
+
+Lapointe, L., & Rivard, S. (2007). A Triple Take on Information System Implementation. Organization Science, 18(1), 89-107. https://doi.org/10.1287/orsc.1060.0225
+
+Luhmann, N. (1992). Kommunikation mit Zettelkästen. En A. Kieserling (Ed.), Universität als Milieu. Haux.
+
+Magnani, G., & Gioia, D. A. (2023). Using the Gioia Methodology in international business and entrepreneurship research. International Business Review, 32(2), 102097. https://doi.org/10.1016/j.ibusrev.2022.102097
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
+----
+----
+Los inicios (2023). Un sueño montado en una aplicación propietaria (OneNote - Microsoft)
+
 # APOPHENIAN
 Desarrollo de una plantilla para registro, estructuración y comunicación de procesos de trabajo académico 
 <img width="1184" alt="Captura de Pantalla 2022-05-31 a la(s) 4 08 54" src="https://user-images.githubusercontent.com/69394840/171137439-e1d4d473-2d5d-4891-966f-a97e315d6c4a.png">
