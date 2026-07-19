@@ -1,12 +1,12 @@
 # Apophenian. Conectar ideas. Hacer visible el proceso. Construir confianza.
 
-**[Una nueva aproximación a la escritura académica]**
+**[CONECTAR IDEAS | EVIDENCIAR EL PROCESO | CONSTRUIR CONFIANZA]**
 
 Apophenian es un procesador de escritura académica basado en inteligencia artificial, diseñado para acompañar la construcción de tesis, artículos científicos y otros productos de investigación.
 
-Su punto de partida es que la escritura académica constituye un proceso de producción de conocimiento y no únicamente un medio para comunicar resultados ya elaborados. En consecuencia, la herramienta no se centra exclusivamente en producir un documento final, sino en apoyar la organización, articulación y documentación del proceso intelectual que conduce a él.
+Su punto de partida es que la escritura académica constituye un proceso de producción de conocimiento y no únicamente un medio para comunicar resultados ya elaborados. En consecuencia, no se centra exclusivamente en producir un documento final, sino en apoyar la organización, articulación y documentación del proceso intelectual que conduce a él.
 
-El proyecto Apophenian (que más allá de desarrollar un software) explora cómo un procesador de textos puede convertirse en un artefacto epistémico: un entorno capaz de favorecer nuevas formas de pensar, establecer relaciones conceptuales y hacer visible el razonamiento que sustenta una investigación.
+El proyecto Apophenian (que más allá de desarrollar una aplicación de software) explora cómo un procesador de textos puede convertirse en un artefacto epistémico, esto es, un entorno capaz de favorecer nuevas formas de pensar, establecer relaciones conceptuales y hacer visible el razonamiento que sustenta una investigación.
 
 
 <img width="4480" height="3120" alt="image" src="https://github.com/user-attachments/assets/7c02be9b-7183-4906-b32b-3396952087de" />
@@ -21,11 +21,11 @@ Aunque la mayoría de los procesadores de texto continúan organizando la escrit
 
 Durante una investigación, las ideas aparecen antes que su ubicación definitiva. Una categoría puede terminar convirtiéndose en un capítulo; una nota marginal puede transformarse en la tesis central; un argumento puede desplazarse varias veces antes de adquirir su forma final.
 
-Apophenian intenta respetar esta naturaleza dinámica de la escritura.
+Apophenian intenta respetar esta naturaleza dinámica de la escritura y del pensamiento.
 
-En este sentido, el proyecto encuentra afinidad con la filosofía de Scrivener, cuya organización por documentos independientes y tablero visual (“corkboard”) representa una de las primeras aproximaciones exitosas a una escritura no lineal. Sin embargo, Apophenian busca extender ese paradigma mediante inteligencia artificial, trazabilidad y visualización de relaciones entre ideas.
+En este sentido, el proyecto encuentra afinidad con la filosofía de Scrivener (un software especializado en escritura de ficción), cuya organización por documentos independientes y tablero visual (“corkboard”) representa una de las primeras aproximaciones exitosas a una escritura no lineal. Sin embargo, Apophenian busca extender ese paradigma mediante inteligencia artificial usada como mentor mayéutico y de pensamiento crítico, una preocupación por la trazabilidad de los avances y decisiones y la visualización de relaciones entre ideas.
 
-También recupera principios del sistema Zettelkasten, particularmente la concepción del conocimiento como una red creciente de notas interconectadas más que como un conjunto jerárquico de documentos.
+También recupera principios del sistema Zettelkasten, particularmente la concepción del conocimiento como una red creciente de notas interconectadas más que como un conjunto jerárquico de documentos.  
 
 **2. Analizar significa relacionar**
 
@@ -52,7 +52,7 @@ La propuesta no consiste en ocultar la intervención de la IA, sino en favorecer
 
 Las sucesivas versiones de un argumento, las relaciones entre ideas, las decisiones editoriales y las intervenciones realizadas mediante IA constituyen evidencia potencial del trabajo desarrollado durante la investigación.
 
-Esta perspectiva coincide con una tendencia creciente en investigación cualitativa que propone fortalecer la confianza mediante la documentación explícita del proceso analítico, más que únicamente mediante la presentación de resultados finales (Cloutier y Ravasi, 2021).
+Esta perspectiva coincide con una tendencia creciente en investigación cualitativa que propone fortalecer la confianza mediante la documentación explícita del proceso analítico, más que únicamente mediante la presentación de resultados finales (Cloutier y Ravasi, 2021). Y en el terreno del uso académico de IA, coincide con la propuesta de https://www.criticalthinkingbot.com/ de combatir la dependencia cognitiva permitiendo a modelos instalados en local, actuar como espejos socráticos, a través de funciones de MentorIA mayéutica. 
 
 ## Objetivos del proyecto
 
@@ -66,6 +66,8 @@ Apophenian busca desarrollar un entorno donde sea posible:
 * documentar el proceso de construcción del conocimiento;
 * favorecer la transparencia del uso de inteligencia artificial;
 * generar productos académicos con mayor trazabilidad.
+
+  		*Apophenian proporciona organización para la imaginación que relaciona*
 
 
 ## Estado del proyecto
@@ -85,7 +87,7 @@ No representa todavía una versión estable del software.
 Apophenian se inspira en distintas tradiciones de investigación y de escritura, entre ellas:
 
 * razonamiento de IA del Critical Thinking Bot
-* la escritura no lineal propuesta por Scrivener;
+* la escritura no lineal organizada por Scrivener;
 * el sistema Zettelkasten de Niklas Luhmann;
 * la investigación cualitativa orientada a procesos;
 * las metodologías de construcción teórica;
@@ -105,7 +107,7 @@ La escritura no se limita a registrar ideas previamente formadas: también permi
 
 3. La escritura no es lineal
 
-Una tesis se construye mediante avances, interrupciones, retornos y reorganizaciones. Apophenian permite trabajar en cualquier orden y generar entregas sin imponer una secuencia de escritura ajena al proceso real de investigación.
+Una tesis, como cualquier otro producto académico, se construye mediante avances, interrupciones, retornos y reorganizaciones. Apophenian permite trabajar en cualquier orden y generar entregas sin imponer una secuencia de escritura ajena al proceso real de investigación.
 
 4. La idea es la unidad de trabajo; el documento, la unidad de entrega
 
@@ -125,7 +127,7 @@ La dirección de tesis no debe limitarse a evaluar el producto final, sino acomp
 
 8. La inteligencia artificial es una tecnología cognitiva
 
-La inteligencia artificial debe ampliar la capacidad de razonamiento, no sustituir la autoría. Por ello, Apophenian concibe la IA como una instancia que formula preguntas, identifica problemas y ofrece señalamientos, en lugar de producir párrafos listos para copiar. Su intervención debe ser configurable, explícita, documentada y auditable, con prioridad para modelos locales que protejan los borradores.
+La inteligencia artificial debe ampliar la capacidad de razonamiento, no sustituir la autoría. Por ello, Apophenian concibe la IA como una instancia que formula preguntas, identifica problemas y ofrece señalamientos, en lugar de producir párrafos listos para copiar. Su intervención debe ser configurable, explícita, documentada y auditable, con prioridad para modelos locales que protejan los borradores e información confidencial que puedan contener los materiales de investigación.
 
 9. Privacidad y pertenencia
 
@@ -136,11 +138,13 @@ Los borradores son materiales intelectuales en formación y deben permanecer baj
 
 
 ## Declaración de uso
-La redacción de este texto fue asistida por ChatGPT 5.6 Pro. 
+La redacción de este texto fue asistida por ChatGPT 5.6 Pro. Las referencias fueron proporcionadas por la autora y/o verificadas por ella.
 
 ## Referencias
 
 Ahrens, S. (2022). How to Take Smart Notes (Revised Edition). Sönke Ahrens.
+
+Archivo de Niklas Luhmann. (s/f). Recuperado el 29 de enero de 2024, de https://niklas-luhmann-archiv.de/
 
 Cloutier, C., & Ravasi, D. (2021). Using tables to enhance trustworthiness in qualitative research. Strategic Organization, 19(1), 113-133. https://doi.org/10.1177/1476127020979329
 
@@ -171,7 +175,7 @@ Magnani, G., & Gioia, D. A. (2023). Using the Gioia Methodology in international
 ---
 ----
 ----
-Los inicios (2023). Un sueño montado en una aplicación propietaria (OneNote - Microsoft)
+Los inicios (2022). Un sueño montado en una aplicación propietaria (OneNote - Microsoft)
 
 # APOPHENIAN
 Desarrollo de una plantilla para registro, estructuración y comunicación de procesos de trabajo académico 
