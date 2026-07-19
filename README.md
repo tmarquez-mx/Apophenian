@@ -13,8 +13,6 @@ El proyecto Apophenian (que más allá de desarrollar un software) explora cómo
 
 
 
-
-
 ## Fundamentos
 
 **1. La escritura académica no es lineal**
@@ -80,6 +78,7 @@ No representa todavía una versión estable del software.
 
 <img width="1180" height="740" alt="apophenian_ver_al_lado_1" src="https://github.com/user-attachments/assets/b1c5bf92-247d-4b8a-aa20-6ec544cfd7a5" />
 
+<img width="1180" height="740" alt="apophenian_apofenia_1" src="https://github.com/user-attachments/assets/dd725a21-6d9e-4ca7-ac53-42705cf6f00d" />
 
 ## Inspiración
 
