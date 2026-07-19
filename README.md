@@ -1,6 +1,6 @@
-# Apophenian. Conectar ideas. Hacer visible el proceso. Construir confianza.
+# Apophenian.
 
-**[CONECTAR IDEAS | EVIDENCIAR EL PROCESO | CONSTRUIR CONFIANZA]**
+**[CONECTAR IDEAS | EVIDENCIAR PROCESOS | CONSTRUIR CONFIANZA]**
 
 Apophenian es un procesador de escritura académica basado en inteligencia artificial, diseñado para acompañar la construcción de tesis, artículos científicos y otros productos de investigación.
 
