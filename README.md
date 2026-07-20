@@ -90,6 +90,8 @@ Apophenian se inspira en distintas tradiciones de investigación y de escritura,
 * la escritura no lineal organizada por Scrivener;
 * el sistema Zettelkasten de Niklas Luhmann;
 * la investigación cualitativa orientada a procesos;
+* los grafos de Obsidian
+* la estructura de trabajo compartido y control de versiones de Github
 * las metodologías de construcción teórica;
 * los principios de trazabilidad y transparencia analítica.
 
