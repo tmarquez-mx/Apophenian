@@ -96,6 +96,7 @@ No representa todavía una versión estable del software.
 
 
 [Prototipo](https://apophenian.netlify.app/apophenian)
+
 [Manual](https://apophenian.netlify.app/manual_apophenian#lmstudio)
 
 
