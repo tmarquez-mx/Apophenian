@@ -87,11 +87,15 @@ Esta versión constituye una prueba de concepto cuyo propósito es explorar nuev
 
 No representa todavía una versión estable del software.
 
+
 <img width="1180" height="740" alt="apophenian_ver_al_lado_1" src="https://github.com/user-attachments/assets/b1c5bf92-247d-4b8a-aa20-6ec544cfd7a5" />
+
 
 <img width="1180" height="740" alt="apophenian_apofenia_1" src="https://github.com/user-attachments/assets/dd725a21-6d9e-4ca7-ac53-42705cf6f00d" />
 
-[Prototipo] ()
+
+
+[Prototipo](https://apophenian.netlify.app/apophenian)
 [Manual](https://apophenian.netlify.app/manual_apophenian#lmstudio)
 
 
@@ -149,12 +153,15 @@ La inteligencia artificial debe ampliar la capacidad de razonamiento, no sustitu
 
 Los borradores son materiales intelectuales en formación y deben permanecer bajo el control de sus autoras y autores. Apophenian prioriza el almacenamiento local, evita la telemetría innecesaria y permite exportar el proyecto completo en un formato portable que pueda conservarse, trasladarse y respaldarse sin depender de un servicio externo.
 
+
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/32137434-3003-4394-925e-1a8498d69365" />
+
 
 
 
 ## Declaración de uso
 La redacción de este texto fue asistida por ChatGPT 5.6 Pro. Las referencias fueron proporcionadas por la autora y/o verificadas por ella.
+
 
 ## Referencias
 
