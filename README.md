@@ -148,16 +148,27 @@ Ahrens, S. (2022). How to Take Smart Notes (Revised Edition). Sönke Ahrens.
 
 Archivo de Niklas Luhmann. (s/f). Recuperado el 29 de enero de 2024, de https://niklas-luhmann-archiv.de/
 
+Charmaz, K. (2006). Constructing grounded theory: A practical guide through qualitative analysis. SAGE Publications
+
+Charmaz, K. (2014). Constructing grounded theory (2nd ed.). SAGE Publications
+
 Cloutier, C., & Ravasi, D. (2021). Using tables to enhance trustworthiness in qualitative research. Strategic Organization, 19(1), 113-133. https://doi.org/10.1177/1476127020979329
+
+Glaser, B. G., & Strauss, A. L. (1967). The discovery of grounded theory: Strategies for qualitative research. Aldine Publishing
 
 Langley, A. (1999). Strategies for theorizing from process data. Academy of Management Review, 24(4), 691-710.
 
 Lapointe, L., & Rivard, S. (2007). A Triple Take on Information System Implementation. Organization Science, 18(1), 89-107. https://doi.org/10.1287/orsc.1060.0225
 
+Lincoln, Y. S., & Guba, E. G. (1985). Naturalistic inquiry. SAGE Publications
+
 Luhmann, N. (1992). Kommunikation mit Zettelkästen. En A. Kieserling (Ed.), Universität als Milieu. Haux.
 
 Magnani, G., & Gioia, D. A. (2023). Using the Gioia Methodology in international business and entrepreneurship research. International Business Review, 32(2), 102097. https://doi.org/10.1016/j.ibusrev.2022.102097
 
+Noblit, G. W., & Hare, R. D. (1988). Meta-ethnography: Synthesizing qualitative studies (Vol. 11). SAGE Publications
+
+Strauss, A. L., & Corbin, J. M. (1998). Basics of qualitative research: Techniques and procedures for developing grounded theory (2nd ed.). SAGE Publications
 
 
 
