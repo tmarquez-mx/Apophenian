@@ -6,7 +6,7 @@ Apophenian es un procesador de escritura académica basado en inteligencia artif
 
 Su punto de partida es que la escritura académica constituye un proceso de producción de conocimiento y no únicamente un medio para comunicar resultados ya elaborados. En consecuencia, no se centra exclusivamente en producir un documento final, sino en apoyar la organización, articulación y documentación del proceso intelectual que conduce a él.
 
-El proyecto Apophenian (que más allá de desarrollar una aplicación de software) explora cómo un procesador de textos puede convertirse en un artefacto epistémico, esto es, un entorno capaz de favorecer nuevas formas de pensar, establecer relaciones conceptuales y hacer visible el razonamiento que sustenta una investigación.
+En suma, el proyecto Apophenian, más allá de desarrollar una aplicación de software, explora cómo un procesador de textos puede convertirse en un artefacto epistémico, esto es, un entorno capaz de favorecer nuevas formas de pensar, establecer relaciones conceptuales y hacer visible el razonamiento que sustenta una investigación.
 
 
 <img width="4480" height="3120" alt="image" src="https://github.com/user-attachments/assets/7c02be9b-7183-4906-b32b-3396952087de" />
@@ -17,7 +17,7 @@ El proyecto Apophenian (que más allá de desarrollar una aplicación de softwar
 
 **1. La escritura académica no es lineal**
 
-Aunque la mayoría de los procesadores de texto continúan organizando la escritura como una secuencia lineal de páginas y capítulos, numerosos estudios sobre investigación cualitativa y construcción teórica muestran que el conocimiento se desarrolla mediante procesos iterativos de comparación, reorganización, reinterpretación y síntesis.
+Aunque la mayoría de los procesadores de texto continúan organizando la escritura como una secuencia lineal de páginas y capítulos, numerosos estudios sobre investigación cualitativa y construcción teórica (Glaser & Strauss, 1967; Lincoln & Guba  1985; Noblit & Hare 1988;  Charmaz 2006 y 2014; Strauss & Corbin 1998) muestran que el conocimiento se desarrolla mediante procesos iterativos de comparación, reorganización, reinterpretación y síntesis.
 
 Durante una investigación, las ideas aparecen antes que su ubicación definitiva. Una categoría puede terminar convirtiéndose en un capítulo; una nota marginal puede transformarse en la tesis central; un argumento puede desplazarse varias veces antes de adquirir su forma final.
 
