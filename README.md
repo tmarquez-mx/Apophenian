@@ -1,6 +1,8 @@
 # Apophenian.
 
+
 **[CONECTAR IDEAS | EVIDENCIAR PROCESOS | CONSTRUIR CONFIANZA]**
+
 
 Apophenian es un procesador de escritura académica basado en inteligencia artificial, diseñado para acompañar la construcción de tesis, artículos científicos y otros productos de investigación.
 
@@ -9,11 +11,14 @@ Su punto de partida es que la escritura académica constituye un proceso de prod
 En suma, el proyecto Apophenian, más allá de desarrollar una aplicación de software, explora cómo un procesador de textos puede convertirse en un artefacto epistémico, esto es, un entorno capaz de favorecer nuevas formas de pensar, establecer relaciones conceptuales y hacer visible el razonamiento que sustenta una investigación.
 
 
+
 <img width="4480" height="3120" alt="image" src="https://github.com/user-attachments/assets/7c02be9b-7183-4906-b32b-3396952087de" />
 
 
 
+
 ## Fundamentos
+
 
 **1. La escritura académica no es lineal**
 
@@ -27,6 +32,7 @@ En este sentido, el proyecto encuentra afinidad con la filosofía de Scrivener (
 
 También recupera principios del sistema Zettelkasten, particularmente la concepción del conocimiento como una red creciente de notas interconectadas más que como un conjunto jerárquico de documentos.  
 
+
 **2. Analizar significa relacionar**
 
 Una segunda premisa sostiene que analizar consiste, fundamentalmente, en establecer relaciones.
@@ -38,6 +44,7 @@ Esta idea aparece de manera explícita en múltiples metodologías cualitativas 
 De forma similar, la teorización basada en procesos descrita por Langley (1999) entiende la construcción teórica como una actividad permanente de reorganización temporal y conceptual de los datos.
 
 Apophenian intenta convertir esa actividad relacional en una característica central de la escritura, permitiendo establecer conexiones explícitas entre fragmentos de texto, notas, conceptos, referencias bibliográficas y evidencias.
+
 
 
 **3. La confianza también se construye**
@@ -53,6 +60,7 @@ La propuesta no consiste en ocultar la intervención de la IA, sino en favorecer
 Las sucesivas versiones de un argumento, las relaciones entre ideas, las decisiones editoriales y las intervenciones realizadas mediante IA constituyen evidencia potencial del trabajo desarrollado durante la investigación.
 
 Esta perspectiva coincide con una tendencia creciente en investigación cualitativa que propone fortalecer la confianza mediante la documentación explícita del proceso analítico, más que únicamente mediante la presentación de resultados finales (Cloutier y Ravasi, 2021). Y en el terreno del uso académico de IA, coincide con la propuesta de https://www.criticalthinkingbot.com/ de combatir la dependencia cognitiva permitiendo a modelos instalados en local, actuar como espejos socráticos, a través de funciones de MentorIA mayéutica. 
+
 
 ## Objetivos del proyecto
 
@@ -70,6 +78,7 @@ Apophenian busca desarrollar un entorno donde sea posible:
   		*Apophenian proporciona organización para la imaginación que relaciona*
 
 
+
 ## Estado del proyecto
 
 Estado actual: Demo funcional / Research prototype
@@ -81,6 +90,11 @@ No representa todavía una versión estable del software.
 <img width="1180" height="740" alt="apophenian_ver_al_lado_1" src="https://github.com/user-attachments/assets/b1c5bf92-247d-4b8a-aa20-6ec544cfd7a5" />
 
 <img width="1180" height="740" alt="apophenian_apofenia_1" src="https://github.com/user-attachments/assets/dd725a21-6d9e-4ca7-ac53-42705cf6f00d" />
+
+[Prototipo] ()
+[Manual](https://apophenian.netlify.app/manual_apophenian#lmstudio)
+
+
 
 ## Inspiración
 
