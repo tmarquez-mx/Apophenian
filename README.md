@@ -155,7 +155,10 @@ La inteligencia artificial debe ampliar la capacidad de razonamiento, no sustitu
 Los borradores son materiales intelectuales en formación y deben permanecer bajo el control de sus autoras y autores. Apophenian prioriza el almacenamiento local, evita la telemetría innecesaria y permite exportar el proyecto completo en un formato portable que pueda conservarse, trasladarse y respaldarse sin depender de un servicio externo.
 
 
+
+
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/32137434-3003-4394-925e-1a8498d69365" />
+
 
 
 
