@@ -68,6 +68,9 @@ _______
 
 Elegir entre tesis, protocolo de investigación y ensayo académico. Cada plantilla propone apartados y orientaciones de escritura que pueden adaptarse al trabajo.
 
+<br>
+
+
 ![Demo: elegir la plantilla de ensayo académico y consultar la guía del desarrollo argumentativo.](docs/demos/01-plantillas.gif)
 
 [Ver captura sin animación](docs/demos/01-plantillas.png) · [Leer los pasos](docs/demos/README.md#plantillas)
@@ -76,6 +79,9 @@ Elegir entre tesis, protocolo de investigación y ensayo académico. Cada planti
 #### Avances, versiones y diario de investigación
 
 Consultar metas y tiempo por apartado, mirar el Tablero, guardar una versión con una descripción de lo que cambió y recuperar las decisiones registradas en el diario.
+
+<br>
+
 
 ![Demo: consultar el avance, guardar una versión del manuscrito y abrir el diario de investigación.](docs/demos/04-proceso-versiones.gif)
 
@@ -90,16 +96,23 @@ _______
 
 Leer y comentar los apartados de una copia compartida, junto al manuscrito. El intercambio se realiza mediante un archivo compartido; no requiere editar el texto de quien investiga ni supone colaboración simultánea en la nube.
 
+<br>
+
+
 ![Demo: la supervisión abre una copia de ejemplo y agrega una pregunta junto a la introducción.](docs/demos/05-supervision.gif)
 
 [Ver captura sin animación](docs/demos/05-supervision.png) · [Leer los pasos](docs/demos/README.md#supervisión-de-tesis)
 
 
+<br>
+
 #### MentorIA ayuda, no sustituye
 
 MentorIA está orientada a señalar y preguntar para acompañar la revisión. La escritura y las decisiones corresponden al estudiante.
 
-Esta demo muestra el **modo de ejemplo con reglas locales, sin un modelo de lenguaje conectado**. La revisión con un modelo local requiere configurar Ollama o LM Studio.
+Esta demo muestra el **modo de ejemplo con reglas locales, sin un modelo de lenguaje conectado**. La revisión con un modelo local requiere configurar Ollama o LM Studio. 
+<br>
+
 
 ![Demo: abrir MentorIA, generar una revisión con reglas locales y leer una pregunta que orienta la reflexión.](docs/demos/06-mentoria.gif)
 
