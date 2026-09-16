@@ -3,16 +3,19 @@
 
 **[CONECTAR IDEAS | EVIDENCIAR PROCESOS | CONSTRUIR CONFIANZA]**
 
-[Ver demos de las funciones](#demos)
+
 
 
 Apophenian es un procesador de escritura académica basado en inteligencia artificial, diseñado para acompañar la construcción de tesis, artículos científicos y otros productos de investigación.
 
 Su punto de partida es que la escritura académica constituye un proceso de producción de conocimiento y no únicamente un medio para comunicar resultados ya elaborados. En consecuencia, no se centra exclusivamente en producir un documento final, sino en apoyar la organización, articulación y documentación del proceso intelectual que conduce a él.
 
-En suma, el proyecto Apophenian, más allá de desarrollar una aplicación de software, explora cómo un procesador de textos puede convertirse en un artefacto epistémico, esto es, un entorno capaz de favorecer nuevas formas de pensar, establecer relaciones conceptuales y hacer visible el razonamiento que sustenta una investigación.
+En suma, el proyecto Apophenian, más allá de desarrollar una aplicación de software, explora cómo un procesador de textos puede convertirse en un artefacto epistémico, esto es, un entorno capaz de favorecer nuevas formas de pensar, establecer relaciones conceptuales y hacer visible el razonamiento que sustenta una investigación.  
 
 
+
+
+[Ver demos de las funciones](#demos)
 
 
 
