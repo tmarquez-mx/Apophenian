@@ -14,8 +14,6 @@ En suma, el proyecto Apophenian, más allá de desarrollar una aplicación de so
 
 
 
-<img width="4480" height="3120" alt="image" src="https://github.com/user-attachments/assets/7c02be9b-7183-4906-b32b-3396952087de" />
-
 
 
 
@@ -27,6 +25,7 @@ Recorridos breves por las funciones de Apophenian, organizados en sus tres objet
 
 ### Conectar ideas
 
+
 #### Escribir y consultar en el mismo entorno
 
 Abrir otro apartado en paralelo, intercambiarlo con el que se está escribiendo y consultar notas personales y materiales de investigación desde el panel lateral.
@@ -34,6 +33,7 @@ Abrir otro apartado en paralelo, intercambiarlo con el que se está escribiendo 
 ![Demo: abrir el marco teórico junto a la introducción, intercambiar los apartados y consultar notas y materiales.](docs/demos/02-consulta-paralela.gif)
 
 [Ver captura sin animación](docs/demos/02-consulta-paralela.png) · [Leer los pasos](docs/demos/README.md#consulta-paralela)
+
 
 #### Grafo Apophenia: ver la integración del trabajo
 
@@ -43,7 +43,10 @@ Visualizar las relaciones entre apartados y conceptos, incorporar las referencia
 
 [Ver captura sin animación](docs/demos/03-apophenia.png) · [Leer los pasos](docs/demos/README.md#grafo-apophenia)
 
+
+
 ### Visibilizar el proceso
+
 
 #### Plantillas para diferentes documentos académicos
 
@@ -53,6 +56,7 @@ Elegir entre tesis, protocolo de investigación y ensayo académico. Cada planti
 
 [Ver captura sin animación](docs/demos/01-plantillas.png) · [Leer los pasos](docs/demos/README.md#plantillas)
 
+
 #### Avances, versiones y diario de investigación
 
 Consultar metas y tiempo por apartado, mirar el Tablero, guardar una versión con una descripción de lo que cambió y recuperar las decisiones registradas en el diario.
@@ -60,6 +64,8 @@ Consultar metas y tiempo por apartado, mirar el Tablero, guardar una versión co
 ![Demo: consultar el avance, guardar una versión del manuscrito y abrir el diario de investigación.](docs/demos/04-proceso-versiones.gif)
 
 [Ver captura sin animación](docs/demos/04-proceso-versiones.png) · [Leer los pasos](docs/demos/README.md#proceso-y-versiones)
+
+
 
 ### Construir confianza
 
@@ -70,6 +76,7 @@ Leer y comentar los apartados de una copia compartida, junto al manuscrito. El i
 ![Demo: la supervisión abre una copia de ejemplo y agrega una pregunta junto a la introducción.](docs/demos/05-supervision.gif)
 
 [Ver captura sin animación](docs/demos/05-supervision.png) · [Leer los pasos](docs/demos/README.md#supervisión-de-tesis)
+
 
 #### MentorIA ayuda, no sustituye
 
