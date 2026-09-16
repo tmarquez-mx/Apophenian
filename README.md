@@ -121,6 +121,9 @@ Esta demo muestra el **modo de ejemplo con reglas locales, sin un modelo de leng
 [Procedencia de las grabaciones y guía sin animación](docs/demos/README.md)
 
 
+<br>
+<br>
+
 ## Fundamentos
 
 
@@ -137,6 +140,8 @@ En este sentido, el proyecto encuentra afinidad con la filosofía de Scrivener (
 También recupera principios del sistema Zettelkasten, particularmente la concepción del conocimiento como una red creciente de notas interconectadas más que como un conjunto jerárquico de documentos.  
 
 
+<br>
+
 **2. Analizar significa relacionar**
 
 Una segunda premisa sostiene que analizar consiste, fundamentalmente, en establecer relaciones.
@@ -148,6 +153,8 @@ Esta idea aparece de manera explícita en múltiples metodologías cualitativas 
 De forma similar, la teorización basada en procesos descrita por Langley (1999) entiende la construcción teórica como una actividad permanente de reorganización temporal y conceptual de los datos.
 
 Apophenian intenta convertir esa actividad relacional en una característica central de la escritura, permitiendo establecer conexiones explícitas entre fragmentos de texto, notas, conceptos, referencias bibliográficas y evidencias.
+
+<br>
 
 
 
@@ -166,6 +173,8 @@ Las sucesivas versiones de un argumento, las relaciones entre ideas, las decisio
 Esta perspectiva coincide con una tendencia creciente en investigación cualitativa que propone fortalecer la confianza mediante la documentación explícita del proceso analítico, más que únicamente mediante la presentación de resultados finales (Cloutier y Ravasi, 2021). Y en el terreno del uso académico de IA, coincide con la propuesta de https://www.criticalthinkingbot.com/ de combatir la dependencia cognitiva permitiendo a modelos instalados en local, actuar como espejos socráticos, a través de funciones de MentorIA mayéutica. 
 
 
+<br>
+
 ## Objetivos del proyecto
 
 Apophenian busca desarrollar un entorno donde sea posible:
@@ -182,14 +191,13 @@ Apophenian busca desarrollar un entorno donde sea posible:
   		*Apophenian proporciona organización para la imaginación que relaciona*
 
 
+<br>
+
 
 ## Estado del proyecto
 
-Estado actual: Demo funcional / Research prototype
-
-Esta versión constituye una prueba de concepto cuyo propósito es explorar nuevas formas de interacción entre personas investigadoras, escritura académica e inteligencia artificial.
-
-No representa todavía una versión estable del software.
+Estado actual: Piloto bajo pruebas reales
+Esta versión constituye entra a pruebas reales cuyo propósito es explorar nuevas formas de interacción entre personas investigadoras, escritura académica e inteligencia artificial.
 
 
 <img width="1180" height="740" alt="apophenian_ver_al_lado_1" src="https://github.com/user-attachments/assets/b1c5bf92-247d-4b8a-aa20-6ec544cfd7a5" />
