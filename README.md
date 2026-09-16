@@ -3,6 +3,8 @@
 
 **[CONECTAR IDEAS | EVIDENCIAR PROCESOS | CONSTRUIR CONFIANZA]**
 
+[Ver demos de las funciones](#demos)
+
 
 Apophenian es un procesador de escritura académica basado en inteligencia artificial, diseñado para acompañar la construcción de tesis, artículos científicos y otros productos de investigación.
 
@@ -15,6 +17,71 @@ En suma, el proyecto Apophenian, más allá de desarrollar una aplicación de so
 <img width="4480" height="3120" alt="image" src="https://github.com/user-attachments/assets/7c02be9b-7183-4906-b32b-3396952087de" />
 
 
+
+
+## Demos
+
+Recorridos breves por las funciones de Apophenian, organizados en sus tres objetivos. Las animaciones muestran la **versión pública 0.9** con un proyecto ficticio; no contienen trabajos ni datos de estudiantes.
+
+[Conectar ideas](#conectar-ideas) · [Visibilizar el proceso](#visibilizar-el-proceso) · [Construir confianza](#construir-confianza)
+
+### Conectar ideas
+
+#### Escribir y consultar en el mismo entorno
+
+Abrir otro apartado en paralelo, intercambiarlo con el que se está escribiendo y consultar notas personales y materiales de investigación desde el panel lateral.
+
+![Demo: abrir el marco teórico junto a la introducción, intercambiar los apartados y consultar notas y materiales.](docs/demos/02-consulta-paralela.gif)
+
+[Ver captura sin animación](docs/demos/02-consulta-paralela.png) · [Leer los pasos](docs/demos/README.md#consulta-paralela)
+
+#### Grafo Apophenia: ver la integración del trabajo
+
+Visualizar las relaciones entre apartados y conceptos, incorporar las referencias citadas y revisar las conexiones y ausencias de la red.
+
+![Demo: abrir Apophenia, activar Mostrar autores y consultar la revisión de la red.](docs/demos/03-apophenia.gif)
+
+[Ver captura sin animación](docs/demos/03-apophenia.png) · [Leer los pasos](docs/demos/README.md#grafo-apophenia)
+
+### Visibilizar el proceso
+
+#### Plantillas para diferentes documentos académicos
+
+Elegir entre tesis, protocolo de investigación y ensayo académico. Cada plantilla propone apartados y orientaciones de escritura que pueden adaptarse al trabajo.
+
+![Demo: elegir la plantilla de ensayo académico y consultar la guía del desarrollo argumentativo.](docs/demos/01-plantillas.gif)
+
+[Ver captura sin animación](docs/demos/01-plantillas.png) · [Leer los pasos](docs/demos/README.md#plantillas)
+
+#### Avances, versiones y diario de investigación
+
+Consultar metas y tiempo por apartado, mirar el Tablero, guardar una versión con una descripción de lo que cambió y recuperar las decisiones registradas en el diario.
+
+![Demo: consultar el avance, guardar una versión del manuscrito y abrir el diario de investigación.](docs/demos/04-proceso-versiones.gif)
+
+[Ver captura sin animación](docs/demos/04-proceso-versiones.png) · [Leer los pasos](docs/demos/README.md#proceso-y-versiones)
+
+### Construir confianza
+
+#### Revisión directa por la supervisión de tesis
+
+Leer y comentar los apartados de una copia compartida, junto al manuscrito. El intercambio se realiza mediante un archivo compartido; no requiere editar el texto de quien investiga ni supone colaboración simultánea en la nube.
+
+![Demo: la supervisión abre una copia de ejemplo y agrega una pregunta junto a la introducción.](docs/demos/05-supervision.gif)
+
+[Ver captura sin animación](docs/demos/05-supervision.png) · [Leer los pasos](docs/demos/README.md#supervisión-de-tesis)
+
+#### MentorIA ayuda, no sustituye
+
+MentorIA está orientada a señalar y preguntar para acompañar la revisión. La escritura y las decisiones corresponden al estudiante.
+
+Esta demo muestra el **modo de ejemplo con reglas locales, sin un modelo de lenguaje conectado**. La revisión con un modelo local requiere configurar Ollama o LM Studio.
+
+![Demo: abrir MentorIA, generar una revisión con reglas locales y leer una pregunta que orienta la reflexión.](docs/demos/06-mentoria.gif)
+
+[Ver captura sin animación](docs/demos/06-mentoria.png) · [Leer los pasos](docs/demos/README.md#mentoria)
+
+[Procedencia de las grabaciones y guía sin animación](docs/demos/README.md)
 
 
 ## Fundamentos
