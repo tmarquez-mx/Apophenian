@@ -5,12 +5,9 @@
 <br>
 
 
-**[CONECTAR IDEAS   |   EVIDENCIAR PROCESOS  |   CONSTRUIR CONFIANZA. ]**
+**[ CONECTAR IDEAS   |   EVIDENCIAR PROCESOS  |   CONSTRUIR CONFIANZA. ]**
 
-
-
-  
-
+<br>
 
 Apophenian es un procesador de escritura académica, diseñado para acompañar la construcción de tesis, protocolos, ensayos académicps y otros productos de investigación.
 
@@ -26,29 +23,33 @@ Recorridos breves por las funciones de Apophenian, organizados en sus tres objet
 
 [Conectar ideas](#conectar-ideas) · [Visibilizar el proceso](#visibilizar-el-proceso) · [Construir confianza](#construir-confianza)
 
-
-<br>
 <br>
 
-<br>
-<br>
-
-_______
 ### -> Objetivo 1: Conectar ideas
+
 
 
 #### Escribir y consultar en el mismo entorno
 
 Abrir otro apartado en paralelo, intercambiarlo con el que se está escribiendo y consultar notas personales y materiales de investigación desde el panel lateral.
 
+<br>
+
+
 ![Demo: abrir el marco teórico junto a la introducción, intercambiar los apartados y consultar notas y materiales.](docs/demos/02-consulta-paralela.gif)
 
 [Ver captura sin animación](docs/demos/02-consulta-paralela.png) · [Leer los pasos](docs/demos/README.md#consulta-paralela)
 
 
+<br>
+<br>
+
 #### Grafo Apophenia: ver la integración del trabajo
 
 Visualizar las relaciones entre apartados y conceptos, incorporar las referencias citadas y revisar las conexiones y ausencias de la red.
+
+<br>
+
 
 ![Demo: abrir Apophenia, activar Mostrar autores y consultar la revisión de la red.](docs/demos/03-apophenia.gif)
 
@@ -56,6 +57,10 @@ Visualizar las relaciones entre apartados y conceptos, incorporar las referencia
 
 
 _______
+
+<br>
+<br>
+
 ### -> Objetivo 2: Visibilizar el proceso
 
 
