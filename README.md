@@ -1,9 +1,15 @@
 # Apophenian.
 
 
-**[CONECTAR IDEAS | EVIDENCIAR PROCESOS | CONSTRUIR CONFIANZA]**
+<br>
+<br>
 
 
+**[CONECTAR IDEAS   |   EVIDENCIAR PROCESOS  |   CONSTRUIR CONFIANZA. ]**
+
+
+
+  
 
 
 Apophenian es un procesador de escritura académica, diseñado para acompañar la construcción de tesis, protocolos, ensayos académicps y otros productos de investigación.
@@ -12,23 +18,23 @@ Su punto de partida es que la escritura académica constituye un proceso de prod
 
 En suma, el proyecto Apophenian, más allá de desarrollar una aplicación de software, explora cómo un procesador de textos puede convertirse en un artefacto epistémico, esto es, un entorno capaz de favorecer nuevas formas de pensar, establecer relaciones conceptuales y hacer visible el razonamiento que sustenta una investigación.  
 
-
-
-
-[Ver demos de las funciones](#demos)
-
-
-
+<br>
 
 ## Demos
 
-Recorridos breves por las funciones de Apophenian, organizados en sus tres objetivos. Las animaciones muestran la **versión pública 0.9** con un proyecto ficticio; no contienen trabajos ni datos de estudiantes.
+Recorridos breves por las funciones de Apophenian, organizados en sus tres objetivos. Las animaciones muestran la **versión piloto 0.9.1 ** con un proyecto ficticio; no contienen trabajos ni datos de estudiantes.
 
 [Conectar ideas](#conectar-ideas) · [Visibilizar el proceso](#visibilizar-el-proceso) · [Construir confianza](#construir-confianza)
 
 
+<br>
+<br>
+
+<br>
+<br>
+
 _______
-### -> Principio 1: Conectar ideas
+### -> Objetivo 1: Conectar ideas
 
 
 #### Escribir y consultar en el mismo entorno
@@ -50,7 +56,7 @@ Visualizar las relaciones entre apartados y conceptos, incorporar las referencia
 
 
 _______
-### -> Principio 2: Visibilizar el proceso
+### -> Objetivo 2: Visibilizar el proceso
 
 
 #### Plantillas para diferentes documentos académicos
@@ -73,7 +79,7 @@ Consultar metas y tiempo por apartado, mirar el Tablero, guardar una versión co
 
 
 _______
-### -> Principio 3:Construir confianza
+### -> Objetivo 3:Construir confianza
 
 #### Revisión directa por la supervisión de tesis
 
@@ -245,6 +251,11 @@ Los borradores son materiales intelectuales en formación y deben permanecer baj
 
 ## Declaración de uso
 La redacción de este texto fue asistida por ChatGPT 5.6 Pro. Las referencias fueron proporcionadas por la autora y/o verificadas por ella.
+
+
+
+[Ver demos de las funciones](#demos)
+
 
 
 ## Referencias
