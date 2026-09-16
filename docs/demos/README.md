@@ -1,6 +1,6 @@
 # Demos de Apophenian
 
-Guía de las seis animaciones incluidas en el [README del proyecto](../../README.md#demos). Cada demo tiene subtítulos en español y una captura fija como alternativa a la animación.
+Guía de las seis animaciones incluidas en el [README del proyecto](../../README.md#demos). Cada demo tiene subtítulos en español y una captura fija como alternativa a la animación. Las animaciones avanzan a un ritmo pausado: resaltan cada control antes de usarlo y mantienen las pantallas principales entre 6 y 12 segundos para facilitar su lectura.
 
 ## Plantillas
 
