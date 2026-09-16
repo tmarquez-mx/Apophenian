@@ -17,6 +17,12 @@ En suma, el proyecto Apophenian, más allá de desarrollar una aplicación de so
 
 <br>
 
+<img width="1254" height="1254" alt="image" src="https://github.com/user-attachments/assets/b79f6725-a1d8-43b5-be7e-f8225eccf9b5" />
+
+
+<br>
+<br>
+
 ## Demos
 
 Recorridos breves por las funciones de Apophenian, organizados en sus tres objetivos. Las animaciones muestran la **versión piloto 0.9.1 ** con un proyecto ficticio; no contienen trabajos ni datos de estudiantes.
