@@ -23,7 +23,9 @@ Recorridos breves por las funciones de Apophenian, organizados en sus tres objet
 
 [Conectar ideas](#conectar-ideas) · [Visibilizar el proceso](#visibilizar-el-proceso) · [Construir confianza](#construir-confianza)
 
-### Conectar ideas
+
+_______
+### -> Principio 1: Conectar ideas
 
 
 #### Escribir y consultar en el mismo entorno
@@ -44,8 +46,8 @@ Visualizar las relaciones entre apartados y conceptos, incorporar las referencia
 [Ver captura sin animación](docs/demos/03-apophenia.png) · [Leer los pasos](docs/demos/README.md#grafo-apophenia)
 
 
-
-### Visibilizar el proceso
+_______
+### -> Principio 2: Visibilizar el proceso
 
 
 #### Plantillas para diferentes documentos académicos
@@ -67,7 +69,8 @@ Consultar metas y tiempo por apartado, mirar el Tablero, guardar una versión co
 
 
 
-### Construir confianza
+_______
+### -> Principio 3:Construir confianza
 
 #### Revisión directa por la supervisión de tesis
 
