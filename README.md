@@ -117,6 +117,8 @@ Leer y comentar los apartados de una copia compartida, junto al manuscrito. El i
 MentorIA está orientada a señalar y preguntar para acompañar la revisión. La escritura y las decisiones corresponden al estudiante.
 
 Esta demo muestra el **modo de ejemplo con reglas locales, sin un modelo de lenguaje conectado**. La revisión con un modelo local requiere configurar Ollama o LM Studio. 
+
+MentorIA también puede usar los modelos del Laboratorio de IA IBERO con una llave del laboratorio, desde la red IBERO o su VPN. Configuración y límites en [MentorIA con el Laboratorio de IA IBERO](docs/laboratorio-ibero.md).
 <br>
 
 
