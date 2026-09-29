@@ -1,0 +1,748 @@
+--- a/apophenian.html
++++ b/apophenian.html
+@@ -2679,8 +2679,8 @@
+             <div class="retro" id="revisorSalida"></div>
+             <div class="nota-demo" id="notaRevisor" role="status" aria-live="polite">Sin modelo conectado: la revisión se
+             simula con reglas locales. Conecta Ollama o LM Studio en Configuración
+-            para una revisión de verdad: la app solo admite direcciones de esta
+-            computadora, así que tu texto no saldrá del equipo.</div>
++            para una revisión de verdad sin que tu texto salga del equipo, o el
++            Laboratorio de IA IBERO, que lo envía a ese servidor institucional.</div>
+           </div>
+           </div>
+           <div id="contGenerico" style="display:none;"></div>
+@@ -2979,27 +2979,56 @@
+     </div><!-- /config-bloque: Herramientas -->
+ 
+     <div class="config-bloque">
+-    <h3>MentorIA mayéutica: modelo local</h3>
++    <h3>MentorIA mayéutica: modelo local o del laboratorio</h3>
+     <p class="sub" style="margin-bottom:12px;">MentorIA mayéutica corre en un modelo de lenguaje
+     instalado en tu propia computadora (Ollama o LM Studio). El campo de dirección solo
+     admite direcciones de esta computadora (localhost, 127.0.0.1 o [::1]) y la app rechaza
+     cualquier otra, incluso si llega dentro de un proyecto importado. Por eso tu borrador
+-    no sale del equipo: no hay a dónde más pueda ir.</p>
++    no sale del equipo: no hay a dónde más pueda ir. La única excepción es el
++    <b>Laboratorio de IA IBERO</b>, si lo eliges como motor: entonces el apartado que revisas
++    (y la base de conocimiento, si la activas) viaja a ese servidor institucional, y la app no
++    admite ninguna otra dirección remota.</p>
+     <div class="campo">
+       <label for="cfgIAMotor">Motor</label>
+       <select id="cfgIAMotor" onchange="cambiarMotorIA(this.value)">
+         <option value="">Sin conectar (revisión simulada)</option>
+         <option value="ollama">Ollama</option>
+         <option value="lmstudio">LM Studio</option>
++        <option value="laboratorio">Laboratorio de IA IBERO</option>
+       </select>
+     </div>
+     <p class="pista-campo"><b>Ollama</b> se maneja por línea de comandos (más ligero);
+     <b>LM Studio</b> trae una interfaz gráfica para descargar y elegir modelos. Cualquiera
+-    de los dos se instala aparte, una sola vez, en tu computadora.</p>
++    de los dos se instala aparte, una sola vez, en tu computadora. El <b>Laboratorio de IA
++    IBERO</b> no se instala: pide una llave y responde solo en la red IBERO o su VPN.</p>
+     <div class="campo">
+-      <label for="cfgIAEndpoint">Dirección local</label>
++      <label for="cfgIAEndpoint" id="cfgIAEndpointEtiqueta">Dirección local</label>
+       <input type="text" id="cfgIAEndpoint" placeholder="http://localhost:11434" onchange="guardarConfigIA()">
+     </div>
++    <div id="cfgIALaboratorio" style="display:none;">
++    <div class="campo">
++      <label for="cfgIALlave">Llave del laboratorio</label>
++      <input type="password" id="cfgIALlave" autocomplete="off" spellcheck="false" placeholder="sk-saptiva-…" onchange="guardarLlaveLaboratorio(this.value)">
++      <button class="btn-mini-config" onclick="olvidarLlaveLaboratorio()" title="Borrar la llave de este navegador">Olvidar llave</button>
++    </div>
++    <p class="pista-campo">La llave se guarda solo en este navegador, aparte del proyecto: no
++    viaja en exportaciones, respaldos ni copias compartidas. Queda sin cifrar en el
++    almacenamiento de la página, así que quien use este navegador podría leerla: en un equipo
++    compartido, pulsa <b>Olvidar llave</b> al terminar.</p>
++    <div class="campo">
++      <label for="cfgIARazonamiento">Razonamiento</label>
++      <select id="cfgIARazonamiento" onchange="guardarConfigIA()">
++        <option value="0">Apagado (recomendado)</option>
++        <option value="512">Con presupuesto de 512 tokens</option>
++        <option value="1024">Con presupuesto de 1024 tokens</option>
++        <option value="2048">Con presupuesto de 2048 tokens</option>
++      </select>
++    </div>
++    <p class="pista-campo">Apagado, la revisión llega antes y el límite de tokens se usa entero
++    para responder. Encendido, el modelo piensa antes de revisar; lo que piensa no se muestra ni
++    se guarda. Solo se acepta una revisión terminada: si queda incompleta, no se muestra texto
++    parcial.</p>
++    </div>
+     <div class="campo">
+       <label for="cfgIAModelo">Modelo</label>
+       <input type="text" id="cfgIAModelo" list="listaModelosIA" placeholder="por ejemplo: llama3.2:3b" onchange="guardarConfigIA()">
+@@ -3076,7 +3105,8 @@
+       trabajo se guarda en el propio equipo, y MentorIA mayéutica, el revisor con inteligencia
+       artificial, cuando se activa, corre en un modelo instalado localmente: la app solo admite
+       direcciones de la propia computadora para hablarle, de modo que los borradores no salen
+-      de ahí.</p>
++      de ahí. Si se elige el Laboratorio de IA IBERO como motor, la revisión corre en ese
++      servidor institucional y el borrador viaja solo hasta ahí.</p>
+       <p>El nombre "Apophenian" designa el fenómeno de percibir conexiones: la vista Apophenia
+       muestra, a través de un grafo de red, tanto los vínculos de una investigación como su
+       ausencia, para que quien escribe pueda preguntarse cuáles conexiones son reales y cuáles
+@@ -3250,7 +3280,8 @@
+       a servidores de la aplicación ni a la nube, y MentorIA mayéutica corre en un modelo local:
+       la app solo admite direcciones de tu propia computadora para hablarle y rechaza cualquier
+       otra, así que ni tus borradores ni los materiales que le des como contexto salen de tu
+-      computadora. La excepción es lo que tú decides compartir: si usas la copia de seguridad
++      computadora, salvo que elijas el Laboratorio de IA IBERO como motor: entonces viajan a
++      ese servidor institucional, y a ningún otro. La otra excepción es lo que tú decides compartir: si usas la copia de seguridad
+       automática o publicas avances para tu supervisión, esos archivos viajan a la
+       carpeta de OneDrive que elijas, es decir, a un servicio en la nube (el institucional). Lo
+       que sale del equipo lo decides tú, no la aplicación.</p>
+@@ -3324,7 +3355,9 @@
+         <p class="faq-r">No. Apophenian no envía nada por su cuenta: todo se guarda en tu
+         equipo. MentorIA mayéutica usa un modelo instalado localmente (Ollama o LM Studio) y el
+         campo de dirección solo admite direcciones de esta computadora: la app rechaza cualquier
+-        otra, así que tus borradores tampoco salen de tu computadora durante la revisión. La única
++        otra, así que tus borradores tampoco salen de tu computadora durante la revisión. Si
++        eliges el Laboratorio de IA IBERO como motor, el apartado que revisas (y la base de
++        conocimiento, si la activas) viaja a ese servidor institucional, y a ningún otro. La otra
+         excepción es lo que tú decides compartir: la copia de seguridad automática y los
+         avances publicados para tu supervisión viajan a la carpeta de OneDrive que
+         elijas.</p>
+@@ -4212,6 +4245,319 @@
+   return HOSTS_LOCALES.indexOf(u.hostname.toLowerCase()) !== -1;
+ }
+ 
++/* ==== inicio: src/mentoria/laboratorio.js (mantener idéntico al archivo del repositorio) ==== */
++/* =====================================================
++   MentorIA con el Laboratorio de IA IBERO (InferNode)
++   El laboratorio es el servidor institucional de modelos de la IBERO:
++   una interfaz compatible con OpenAI en
++   https://api.laboratorioia.ibero.mx/infernode/v1 que pide una llave
++   (Authorization: Bearer sk-saptiva-...). Es la única dirección fuera
++   de esta computadora que MentorIA admite, y solo si quien escribe lo
++   elige en Configuración: A-02 sigue valiendo para Ollama y LM Studio.
++
++   Este bloque es un script clásico, no un módulo ES, por la regla 5
++   (el archivo abre desde file://). En la app vive pegado junto a
++   esEndpointLocal(); en el repositorio vive en
++   src/mentoria/laboratorio.js para que `node --test` lo pruebe sin
++   navegador. Las dos copias deben ser idénticas.
++
++   Reglas que aplica, aprendidas con el gateway:
++   - Solo finish_reason === 'stop' es una revisión. 'length',
++     'content_filter' o una respuesta cortada son fallos, y no se
++     muestra texto parcial: media revisión se lee como revisión entera.
++   - El razonamiento llega en message.reasoning y cuenta dentro de
++     max_tokens. Sin control, un modelo gastó 4096 tokens pensando y
++     cerró con 'length' sin texto. Por eso va apagado por defecto y,
++     si se enciende, con presupuesto sumado al límite.
++   - El razonamiento nunca se muestra ni se registra: ni el campo
++     reasoning ni un <think>...</think> incrustado en el contenido.
++   - La llave no se escribe en el proyecto (viajaría en exportaciones,
++     respaldos y copias compartidas); la app la guarda aparte.
++===================================================== */
++const LaboratorioIBERO = (function(){
++  const BASE_PREDETERMINADA = 'https://api.laboratorioia.ibero.mx/infernode/v1';
++  /* Lista blanca por origen exacto: ni la llave ni el borrador pueden ir a
++     otro servidor aunque alguien edite la dirección. Si el laboratorio cambia
++     de dominio, se cambia aquí, en el código, a propósito. */
++  const ORIGENES_PERMITIDOS = ['https://api.laboratorioia.ibero.mx'];
++  /* Alias estables del laboratorio. /v1/models devuelve además los nombres
++     técnicos (y modelos que no son de chat), así que se ofrecen estos. */
++  const MODELOS = ['Saptiva Turbo', 'Saptiva Omni', 'Saptiva Cortex'];
++  const MODELO_PREDETERMINADO = 'Saptiva Omni';   /* el más rápido */
++  const PRESUPUESTOS_RAZONAMIENTO = [0, 512, 1024, 2048];
++  /* Cuatro secciones de hasta tres puntos caben con holgura en 2048 tokens. */
++  const TOKENS_RESPUESTA = 2048;
++  /* El gateway corta a los 60 s una respuesta sin streaming y devuelve 504.
++     Este plazo solo cubre la red colgada, para no esperar indefinidamente. */
++  const ESPERA_MS = 90 * 1000;
++  const NOMBRE = 'Laboratorio de IA IBERO';
++
++  function normalizarBase(direccion){
++    return String(direccion || '').trim().replace(/\/+$/, '');
++  }
++
++  function esBaseLaboratorio(direccion){
++    let u;
++    try{ u = new URL(normalizarBase(direccion)); }catch(e){ return false; }
++    return u.protocol === 'https:' && ORIGENES_PERMITIDOS.indexOf(u.origin) !== -1;
++  }
++
++  function presupuestoValido(n){
++    const v = Number(n);
++    return (Number.isFinite(v) && v > 0) ? Math.min(Math.floor(v), 8192) : 0;
++  }
++
++  function cuerpoRevision(o){
++    const presupuesto = presupuestoValido(o.razonamiento);
++    const cuerpo = {
++      model: o.modelo,
++      messages: o.mensajes,
++      temperature: o.temperatura,
++      stream: false,
++      max_tokens: TOKENS_RESPUESTA + presupuesto,
++      chat_template_kwargs: {enable_thinking: presupuesto > 0}
++    };
++    if(presupuesto > 0){ cuerpo.thinking_token_budget = presupuesto; }
++    return cuerpo;
++  }
++
++  /* Quita el razonamiento que algunos modelos dejan dentro del contenido.
++     Si solo llega el cierre (la plantilla abrió <think> en el prompt), todo
++     lo anterior era razonamiento. Un <think> sin cierre es razonamiento
++     cortado: no queda revisión. */
++  function limpiarRazonamiento(texto){
++    let t = String(texto == null ? '' : texto);
++    t = t.replace(/<think>[\s\S]*?<\/think>/gi, '');
++    const cierre = t.toLowerCase().lastIndexOf('</think>');
++    if(cierre !== -1){ t = t.slice(cierre + '</think>'.length); }
++    const apertura = t.toLowerCase().indexOf('<think>');
++    if(apertura !== -1){ t = t.slice(0, apertura); }
++    return t.trim();
++  }
++
++  function fallo(tipo, mensaje, extra){
++    const e = new Error(mensaje);
++    e.tipo = tipo;
++    Object.keys(extra || {}).forEach(k => { e[k] = extra[k]; });
++    return e;
++  }
++
++  function interpretarRespuesta(j){
++    const opcion = j && Array.isArray(j.choices) ? j.choices[0] : null;
++    if(!opcion || !opcion.message){
++      throw fallo('incompleta', 'La respuesta del ' + NOMBRE + ' llegó sin revisión (no trae choices). ' +
++        'No se muestra nada.');
++    }
++    const fin = opcion.finish_reason;
++    if(fin !== 'stop'){
++      let causa;
++      if(fin === 'length'){
++        causa = 'el modelo llegó al límite de tokens antes de terminar (finish_reason=length). ' +
++          'Si el razonamiento está encendido, bájale el presupuesto o apágalo; si no, prueba con un apartado más corto';
++      }else if(fin === 'content_filter'){
++        causa = 'el laboratorio filtró la respuesta (finish_reason=content_filter)';
++      }else{
++        causa = 'la respuesta no terminó normalmente (finish_reason=' + (fin == null ? 'ausente' : fin) + ')';
++      }
++      throw fallo('incompleta', 'La revisión quedó incompleta: ' + causa + '. No se muestra texto parcial.',
++        {finalizacion: fin == null ? null : fin});
++    }
++    /* Solo el contenido: message.reasoning y reasoning_content se ignoran. */
++    const texto = limpiarRazonamiento(opcion.message.content);
++    if(!texto){
++      throw fallo('vacia', 'El modelo terminó sin texto de revisión (solo razonamiento o respuesta vacía). ' +
++        'Vuelve a intentarlo o apaga el razonamiento.', {finalizacion: fin});
++    }
++    return {texto: texto, modelo: (j && j.model) || '', finalizacion: fin, uso: (j && j.usage) || null};
++  }
++
++  function segundosDeEspera(valor){
++    if(!valor){ return null; }
++    const n = Number(valor);
++    if(Number.isFinite(n) && n >= 0){ return Math.ceil(n); }
++    const fecha = Date.parse(valor);
++    return Number.isFinite(fecha) ? Math.max(0, Math.ceil((fecha - Date.now()) / 1000)) : null;
++  }
++
++  /* El cuerpo de error de InferNode es {"error":{type, code, message}}. Un
++     502 de un proxy puede traer HTML: ese no se muestra. */
++  function errorHTTP(estado, cuerpo, reintentar, modelo){
++    let detalle = '', codigo = '';
++    try{
++      const j = JSON.parse(cuerpo);
++      if(j && j.error){
++        detalle = String(j.error.message || '').slice(0, 200);
++        codigo = String(j.error.code || j.error.type || '');
++      }
++    }catch(e){ /* no era JSON */ }
++    const extra = {estado: estado, codigo: codigo};
++    const conDetalle = m => m + (detalle ? ' Detalle del servidor: «' + detalle + '».' : '');
++    if(estado === 401){
++      return fallo('http', conDetalle('El ' + NOMBRE + ' rechazó la llave (401). Revisa que la pegaste ' +
++        'completa y que sigue vigente; si la revocaron, pide una nueva.'), extra);
++    }
++    if(estado === 402){
++      return fallo('http', conDetalle('La llave no tiene saldo o cuota disponible en el laboratorio (402).'), extra);
++    }
++    if(estado === 403){
++      return fallo('http', conDetalle('La llave no tiene permiso para usar este modelo (403).'), extra);
++    }
++    if(estado === 404){
++      return fallo('http', /model/i.test(codigo + detalle)
++        ? 'El laboratorio no tiene el modelo «' + (modelo || '') + '» (404). Usa uno de estos: ' +
++          MODELOS.join(', ') + '.'
++        : conDetalle('El laboratorio no reconoce la dirección (404). Revisa la dirección base: ' +
++          'la predeterminada es ' + BASE_PREDETERMINADA + '.'), extra);
++    }
++    if(estado === 429){
++      const s = segundosDeEspera(reintentar);
++      extra.reintentarEn = s;
++      return fallo('http', 'El laboratorio recibió demasiadas solicitudes (429). ' +
++        (s != null ? 'Espera ' + s + ' s antes de volver a pedir la revisión.' : 'Espera un momento antes de volver a intentar.'),
++        extra);
++    }
++    if(estado === 504){
++      return fallo('http', 'El laboratorio cortó la espera (504): el modelo tardó más de 60 s. Prueba con ' +
++        MODELO_PREDETERMINADO + ' (el más rápido), con un apartado más corto o sin la base de conocimiento.', extra);
++    }
++    if(estado === 502 || estado === 503){
++      return fallo('http', 'El laboratorio no pudo atender la solicitud en este momento (' + estado + '). ' +
++        'Suele ser pasajero: vuelve a intentar en unos minutos.', extra);
++    }
++    return fallo('http', conDetalle('El laboratorio respondió con un error (HTTP ' + estado + ').'), extra);
++  }
++
++  /* En el navegador, un rechazo de CORS, una red sin acceso y un bloqueo de
++     red local producen el mismo TypeError: no se pueden distinguir, así que
++     se nombran las tres causas, en el orden en que suelen ocurrir. */
++  function errorDeRed(e, origen){
++    const causa = e && e.cause && (e.cause.code || e.cause.message);
++    let primera;
++    if(origen === 'null'){
++      primera = '(1) esta página se abrió como archivo (file://) y el laboratorio no acepta llamadas sin ' +
++        'origen web: ábrela desde su dirección publicada; ';
++    }else if(origen){
++      primera = '(1) el laboratorio no acepta llamadas desde este origen (' + origen + '): mientras la ' +
++        'plataforma no lo autorice (CORS), el navegador bloquea la llamada; ';
++    }else{
++      primera = '(1) el laboratorio no acepta el origen de esta página (CORS); ';
++    }
++    return fallo('red', 'No se pudo contactar al ' + NOMBRE + '. Causas posibles: ' + primera +
++      '(2) no estás en la red IBERO ni conectado a su VPN; (3) el navegador bloqueó el acceso a la red ' +
++      'local: si apareció un aviso para conectarse a dispositivos de tu red local, permítelo en la ' +
++      'configuración del sitio.', {detalle: causa ? String(causa) : ''});
++  }
++
++  /* Envía y espera, con un solo plazo para la conexión y la lectura del cuerpo.
++     `fetch` se recibe para poder simularlo en pruebas; se llama como función
++     suelta porque window.fetch invocado como método de otro objeto lanza
++     "Illegal invocation". */
++  async function pedir(o, ruta, init){
++    if(!esBaseLaboratorio(o.base)){
++      throw fallo('destino', 'Envío cancelado: ' + normalizarBase(o.base) + ' no es la dirección del ' +
++        NOMBRE + '. Solo se admite ' + ORIGENES_PERMITIDOS.join(', ') + '.');
++    }
++    const llave = String(o.llave || '').trim();
++    if(!llave){
++      throw fallo('llave', 'Falta la llave del ' + NOMBRE + '. Pégala en Configuración → MentorIA mayéutica.');
++    }
++    const traer = o.fetch || fetch;
++    const control = new AbortController();
++    const plazo = o.esperaMs || ESPERA_MS;
++    const reloj = setTimeout(() => control.abort(), plazo);
++    const inicio = Date.now();
++    try{
++      let r;
++      try{
++        r = await traer(normalizarBase(o.base) + ruta, Object.assign({
++          redirect: 'error',      /* E-11: ni la llave ni el borrador siguen redirecciones */
++          credentials: 'omit',
++          signal: control.signal
++        }, init, {headers: Object.assign({'Authorization': 'Bearer ' + llave}, init.headers || {})}));
++      }catch(e){
++        if(control.signal.aborted){
++          throw fallo('tiempo', 'El ' + NOMBRE + ' no respondió en ' + Math.round(plazo / 1000) + ' s. ' +
++            'Revisa tu conexión a la red IBERO y vuelve a intentar.');
++        }
++        throw errorDeRed(e, o.origen);
++      }
++      let cuerpo;
++      try{ cuerpo = await r.text(); }
++      catch(e){
++        throw control.signal.aborted
++          ? fallo('tiempo', 'El ' + NOMBRE + ' dejó de responder a mitad de la respuesta. No se muestra texto parcial.')
++          : fallo('incompleta', 'La respuesta del ' + NOMBRE + ' llegó cortada. No se muestra texto parcial.');
++      }
++      if(!r.ok){ throw errorHTTP(r.status, cuerpo, r.headers.get('Retry-After'), o.modelo); }
++      let j;
++      try{ j = JSON.parse(cuerpo); }
++      catch(e){
++        throw fallo('incompleta', 'La respuesta del ' + NOMBRE + ' llegó cortada o no es JSON. ' +
++          'No se muestra texto parcial.');
++      }
++      return {json: j, ms: Date.now() - inicio};
++    }finally{
++      clearTimeout(reloj);
++    }
++  }
++
++  /* Pide una revisión. opciones: {base, llave, modelo, mensajes, temperatura,
++     razonamiento (tokens; 0 = apagado), origen (location.origin), esperaMs, fetch} */
++  async function revisar(o){
++    if(!String(o.modelo || '').trim()){
++      throw fallo('modelo', 'Falta elegir el modelo del laboratorio: ' + MODELOS.join(', ') + '.');
++    }
++    const r = await pedir(o, '/chat/completions', {
++      method: 'POST',
++      headers: {'Content-Type': 'application/json'},
++      body: JSON.stringify(cuerpoRevision(o))
++    });
++    const salida = interpretarRespuesta(r.json);
++    salida.ms = r.ms;
++    return salida;
++  }
++
++  /* GET /models: sirve como prueba de conexión y de llave. */
++  async function listarModelos(o){
++    const r = await pedir(o, '/models', {method: 'GET', headers: {}});
++    return ((r.json && r.json.data) || []).map(m => m && m.id).filter(Boolean);
++  }
++
++  return {
++    NOMBRE: NOMBRE,
++    BASE_PREDETERMINADA: BASE_PREDETERMINADA,
++    ORIGENES_PERMITIDOS: ORIGENES_PERMITIDOS,
++    MODELOS: MODELOS,
++    MODELO_PREDETERMINADO: MODELO_PREDETERMINADO,
++    PRESUPUESTOS_RAZONAMIENTO: PRESUPUESTOS_RAZONAMIENTO,
++    TOKENS_RESPUESTA: TOKENS_RESPUESTA,
++    ESPERA_MS: ESPERA_MS,
++    esBaseLaboratorio: esBaseLaboratorio,
++    cuerpoRevision: cuerpoRevision,
++    limpiarRazonamiento: limpiarRazonamiento,
++    interpretarRespuesta: interpretarRespuesta,
++    errorHTTP: errorHTTP,
++    revisar: revisar,
++    listarModelos: listarModelos
++  };
++})();
++if(typeof module !== 'undefined' && module.exports){ module.exports = LaboratorioIBERO; }
++/* ==== fin: src/mentoria/laboratorio.js ==== */
++
++/* A-02 con una sola excepción, elegida por quien escribe: con el motor
++   «laboratorio» solo se admite la dirección del Laboratorio de IA IBERO; con
++   los demás, solo esta computadora. Vive aquí por lo mismo que
++   esEndpointLocal: normalizarDatos() lo usa al arrancar. */
++function destinoPermitido(motor, direccion){
++  return motor === 'laboratorio' ? LaboratorioIBERO.esBaseLaboratorio(direccion) : esEndpointLocal(direccion);
++}
++/* La llave no va en `datos`: el proyecto viaja en exportaciones, respaldos y
++   copias compartidas. Se guarda aparte, en este navegador. */
++const CLAVE_LLAVE_LABORATORIO = 'pxdp-llave-laboratorio';
++function leerLlaveLaboratorio(){
++  try{ return localStorage.getItem(CLAVE_LLAVE_LABORATORIO) || ''; }catch(e){ return ''; }
++}
++
+ /* =====================================================
+    A-01 / H-01: saneamiento del HTML del manuscrito
+    El texto de cada apartado es HTML y se pinta con innerHTML en una
+@@ -5004,8 +5350,11 @@
+   }
+   if(typeof d.config.ia.endpoint !== 'string'){ d.config.ia.endpoint = ''; }
+   if(typeof d.config.ia.temperatura !== 'number'){ d.config.ia.temperatura = 0.4; }
+-  /* A-02: un proyecto importado no puede preconfigurar un servidor remoto. */
+-  if(d.config.ia.endpoint && !esEndpointLocal(d.config.ia.endpoint)){ d.config.ia.endpoint = ''; }
++  if(typeof d.config.ia.razonamiento !== 'number' || !(d.config.ia.razonamiento >= 0)){ d.config.ia.razonamiento = 0; }
++  /* A-02: un proyecto importado no puede preconfigurar un servidor remoto. La
++     dirección del laboratorio se conserva solo con su motor; la llave nunca
++     viene en el proyecto. */
++  if(d.config.ia.endpoint && !destinoPermitido(d.config.ia.motor, d.config.ia.endpoint)){ d.config.ia.endpoint = ''; }
+   /* La última revisión de MentorIA de cada apartado, por su identificador en el
+      registro: es lo que permite volver a verla al regresar al apartado. */
+   if(!d.revisionesIA || typeof d.revisionesIA !== 'object' || Array.isArray(d.revisionesIA)){ d.revisionesIA = {}; }
+@@ -8547,7 +8896,13 @@
+    Cada revisión queda en un registro exportable (transparencia
+    académica): fecha, apartado, motor y modelo.
+ ===================================================== */
+-const ENDPOINTS_IA = {ollama:'http://localhost:11434', lmstudio:'http://localhost:1234'};
++const ENDPOINTS_IA = {ollama:'http://localhost:11434', lmstudio:'http://localhost:1234',
++                      laboratorio: LaboratorioIBERO.BASE_PREDETERMINADA};
++/* Nombre del motor para la interfaz, el registro y la declaración de uso. */
++function nombreMotorIA(m){
++  return m === 'ollama' ? 'Ollama' : (m === 'lmstudio' ? 'LM Studio'
++    : (m === 'laboratorio' ? LaboratorioIBERO.NOMBRE : (m || 'motor local')));
++}
+ /* A-02: solo se admite un modelo de esta computadora. */
+ function destinoEfectivoIA(){
+   const ia = datos.config.ia;
+@@ -8560,6 +8915,12 @@
+   if(motor && ENDPOINTS_IA[motor] && datos.config.ia.endpoint === ENDPOINTS_IA[motor === 'ollama' ? 'lmstudio' : 'ollama']){
+     datos.config.ia.endpoint = ENDPOINTS_IA[motor];
+   }
++  /* Entre el laboratorio y un motor local no sirve la dirección del otro, ni
++     sus nombres de modelo. */
++  if(motor && !destinoPermitido(motor, datos.config.ia.endpoint)){ datos.config.ia.endpoint = ENDPOINTS_IA[motor]; }
++  const esAlias = LaboratorioIBERO.MODELOS.indexOf(datos.config.ia.modelo) !== -1;
++  if(motor === 'laboratorio' && !esAlias){ datos.config.ia.modelo = LaboratorioIBERO.MODELO_PREDETERMINADO; }
++  if(motor && motor !== 'laboratorio' && esAlias){ datos.config.ia.modelo = ''; }
+   guardar(true);
+   dibujarConfigIA();
+ }
+@@ -8567,11 +8928,15 @@
+   const ia = datos.config.ia;
+   const campo = document.getElementById('cfgIAEndpoint');
+   const escrita = campo.value.trim().replace(/\/+$/, '');
+-  /* A-02: solo loopback. Si no lo es, se descarta y se restituye lo anterior. */
+-  if(escrita && !esEndpointLocal(escrita)){
++  /* A-02: solo loopback, o solo el laboratorio si ese es el motor. Si no, se
++     descarta y se restituye lo anterior. */
++  if(escrita && !destinoPermitido(ia.motor, escrita)){
+     const el = document.getElementById('estadoIA');
+     if(el){
+-      el.textContent = 'Direcci\u00f3n rechazada: ' + escrita + '. MentorIA solo puede hablarle a un '
++      el.textContent = ia.motor === 'laboratorio'
++        ? 'Direcci\u00f3n rechazada: ' + escrita + '. Con el ' + LaboratorioIBERO.NOMBRE + ' solo se admite '
++          + LaboratorioIBERO.ORIGENES_PERMITIDOS.join(', ') + ': otra direcci\u00f3n recibir\u00eda tu llave y tu manuscrito.'
++        : 'Direcci\u00f3n rechazada: ' + escrita + '. MentorIA solo puede hablarle a un '
+         + 'modelo instalado en esta computadora (localhost, 127.0.0.1 o [::1]). Una direcci\u00f3n '
+         + 'remota enviar\u00eda tu manuscrito fuera del equipo.';
+     }
+@@ -8582,9 +8947,26 @@
+   ia.modelo = document.getElementById('cfgIAModelo').value.trim();
+   ia.temperatura = Math.max(0, Math.min(1, parseFloat(document.getElementById('cfgIATemp').value) || 0.4));
+   ia.usarBase = document.getElementById('cfgIABase').checked;
++  ia.razonamiento = parseInt(document.getElementById('cfgIARazonamiento').value, 10) || 0;
+   guardar(true);
+   actualizarEstadoIA();
+ }
++/* La llave va directo a este navegador, sin pasar por `datos`, y el campo se
++   vacía para que no quede en la página. */
++function guardarLlaveLaboratorio(valor){
++  const llave = String(valor || '').trim();
++  document.getElementById('cfgIALlave').value = '';
++  if(!llave){ return; }
++  try{ localStorage.setItem(CLAVE_LLAVE_LABORATORIO, llave); }
++  catch(e){ anotarFallo('guardar la llave del laboratorio', e); }
++  dibujarConfigIA();
++}
++function olvidarLlaveLaboratorio(){
++  try{ localStorage.removeItem(CLAVE_LLAVE_LABORATORIO); }
++  catch(e){ anotarFallo('olvidar la llave del laboratorio', e); }
++  dibujarConfigIA();
++  notificar('Llave del laboratorio borrada de este navegador.');
++}
+ function dibujarConfigIA(){
+   const ia = datos.config.ia;
+   document.getElementById('cfgIAMotor').value = ia.motor || '';
+@@ -8592,20 +8974,44 @@
+   document.getElementById('cfgIAModelo').value = ia.modelo || '';
+   document.getElementById('cfgIATemp').value = ia.temperatura;
+   document.getElementById('cfgIABase').checked = !!ia.usarBase;
++  /* Laboratorio: llave, razonamiento, dirección remota y sus tres modelos. */
++  const lab = ia.motor === 'laboratorio';
++  document.getElementById('cfgIALaboratorio').style.display = lab ? '' : 'none';
++  document.getElementById('cfgIAEndpointEtiqueta').textContent = lab ? 'Dirección del laboratorio' : 'Dirección local';
++  document.getElementById('cfgIAEndpoint').placeholder = lab ? LaboratorioIBERO.BASE_PREDETERMINADA : 'http://localhost:11434';
++  document.getElementById('cfgIAModelo').placeholder = lab ? LaboratorioIBERO.MODELO_PREDETERMINADO : 'por ejemplo: llama3.2:3b';
++  document.getElementById('cfgIALlave').placeholder = leerLlaveLaboratorio() ? 'Llave guardada en este navegador' : 'sk-saptiva-…';
++  document.getElementById('cfgIARazonamiento').value = String(ia.razonamiento || 0);
++  if(lab){
++    const lista = document.getElementById('listaModelosIA');
++    lista.innerHTML = '';
++    LaboratorioIBERO.MODELOS.forEach(m => {
++      const op = document.createElement('option');
++      op.value = m;
++      lista.appendChild(op);
++    });
++  }
+   actualizarEstadoIA();
+ }
+ function iaConfigurada(){
+   const ia = datos.config.ia;
+-  return !!(ia.motor && ia.endpoint && ia.modelo);
++  return !!(ia.motor && ia.endpoint && ia.modelo && (ia.motor !== 'laboratorio' || leerLlaveLaboratorio()));
+ }
+ function actualizarEstadoIA(){
+   const el = document.getElementById('estadoIA');
+   if(!el){ return; }
+   /* A-02 pedía mostrar el destino efectivo antes de enviar; aquí queda a la
+      vista en Configuración, que es donde se decide. */
++  const lab = datos.config.ia.motor === 'laboratorio';
++  if(lab && !leerLlaveLaboratorio()){
++    el.textContent = 'Falta la llave del ' + LaboratorioIBERO.NOMBRE + ': mientras tanto, las revisiones se simulan con reglas locales.';
++    return;
++  }
+   el.textContent = iaConfigurada()
+-    ? 'Configurado: ' + datos.config.ia.modelo + ' vía ' + (datos.config.ia.motor === 'ollama' ? 'Ollama' : 'LM Studio') +
+-      '. Tus borradores irán a ' + destinoEfectivoIA() + '. Usa "Probar conexión" para verificar.'
++    ? 'Configurado: ' + datos.config.ia.modelo + ' vía ' + nombreMotorIA(datos.config.ia.motor) +
++      '. Tus borradores irán a ' + destinoEfectivoIA() +
++      (lab ? ', un servidor de la IBERO fuera de esta computadora que solo responde en la red IBERO o su VPN' : '') +
++      '. Usa "Probar conexión" para verificar.'
+     : 'Sin conectar: las revisiones se simulan con reglas locales mientras tanto.';
+ }
+ 
+@@ -8614,9 +9020,23 @@
+   const ia = datos.config.ia;
+   const el = document.getElementById('estadoIA');
+   const btn = document.querySelector('button[onclick="probarConexionIA()"]');
+-  if(!ia.motor){ el.textContent = 'Primero elige el motor (Ollama o LM Studio).'; return; }
++  if(!ia.motor){ el.textContent = 'Primero elige el motor (Ollama, LM Studio o el ' + LaboratorioIBERO.NOMBRE + ').'; return; }
+   guardarConfigIA();
+   const base = ia.endpoint || ENDPOINTS_IA[ia.motor];
++  /* Laboratorio: GET /models con la llave prueba a la vez la red, el CORS y la llave. */
++  if(ia.motor === 'laboratorio'){
++    cargando(btn, true, 'Probando…');
++    el.innerHTML = '<span class="spinner" aria-hidden="true"></span> Probando la llave con ' + escaparHTML(base) + '…';
++    try{
++      const ids = await LaboratorioIBERO.listarModelos({base: base, llave: leerLlaveLaboratorio(), origen: location.origin});
++      el.innerHTML = '<strong class="ia-conectado">Conectado.</strong> La llave es válida y el laboratorio sirve ' +
++        ids.length + ' modelos. Para MentorIA elige uno de estos: ' + escaparHTML(LaboratorioIBERO.MODELOS.join(', ')) + '.';
++    }catch(e){
++      el.textContent = explicarErrorIA(e);
++    }
++    cargando(btn, false);
++    return;
++  }
+   if(!esEndpointLocal(base)){
+     el.textContent = 'No se prob\u00f3 nada: ' + base + ' no es una direcci\u00f3n de esta computadora.';
+     return;
+@@ -8655,6 +9075,10 @@
+ /* El error de conexión más común no dice nada por sí mismo; aquí se
+    traduce a las tres causas reales y sus remedios */
+ function explicarErrorIA(e){
++  /* El laboratorio trae su propio diagnóstico: llave, CORS o red, tiempo, 429… */
++  if(datos.config.ia.motor === 'laboratorio'){
++    return (e && e.message) || ('No se pudo usar el ' + LaboratorioIBERO.NOMBRE + '.');
++  }
+   const motor = datos.config.ia.motor === 'ollama' ? 'Ollama' : 'LM Studio';
+   let texto = 'No se pudo conectar con ' + motor + '. Revisa, en este orden: ' +
+     '(1) que ' + motor + ' esté abierto y con el servidor encendido; ' +
+@@ -8734,6 +9158,15 @@
+ async function llamarModeloLocal(mensajes){
+   const ia = datos.config.ia;
+   const base = (ia.endpoint || ENDPOINTS_IA[ia.motor]).replace(/\/+$/, '');
++  /* La excepción elegida a A-02. LaboratorioIBERO.revisar() vuelve a comprobar
++     que la dirección sea la del laboratorio, no sigue redirecciones y solo
++     devuelve una revisión terminada (finish_reason=stop), sin razonamiento. */
++  if(ia.motor === 'laboratorio'){
++    const r = await LaboratorioIBERO.revisar({base: base, llave: leerLlaveLaboratorio(), modelo: ia.modelo,
++      mensajes: mensajes, temperatura: ia.temperatura, razonamiento: ia.razonamiento || 0,
++      origen: location.origin});
++    return r.texto;
++  }
+   /* A-02: \u00faltima barrera antes de enviar. Cubre el caso de un proyecto importado
+      que traiga una direcci\u00f3n remota preconfigurada. */
+   if(!esEndpointLocal(base)){
+@@ -9101,9 +9534,10 @@
+     return;
+   }
+   cargando(btn, true, 'Generando revisión…');
++  const enLaboratorio = datos.config.ia.motor === 'laboratorio';
+   salida.innerHTML = '<div class="cargando-ia"><span class="spinner" aria-hidden="true"></span>' +
+     ' Generando revisión con <b>' + escaparHTML(datos.config.ia.modelo) +
+-    '</b>… el modelo corre en tu equipo.</div>';
++    '</b>… ' + (enLaboratorio ? 'el modelo corre en el ' + LaboratorioIBERO.NOMBRE + '.' : 'el modelo corre en tu equipo.') + '</div>';
+   /* R-95: la nota decía «Revisión generada por…» antes de intentarlo, y se quedaba
+      así aunque el modelo no respondiera. Ahora se escribe según lo que pasó. */
+   const nota = document.getElementById('notaRevisor');
+@@ -9114,11 +9548,16 @@
+     /* Sesión 59: se guarda antes de dibujar, y se dibuja desde lo guardado, de
+        modo que lo que se ve en pantalla es exactamente lo que quedó registrado. */
+     const entrada = registrarRevision(respuesta, false);
+-    nota.textContent = 'Revisión generada por ' + datos.config.ia.modelo + ', que corre en esta computadora. ' +
++    nota.textContent = enLaboratorio
++      ? 'Revisión generada por ' + datos.config.ia.modelo + ' en el ' + LaboratorioIBERO.NOMBRE + '. ' +
++        'Para obtenerla, tu borrador viajó a ese servidor institucional, y a ningún otro.'
++      : 'Revisión generada por ' + datos.config.ia.modelo + ', que corre en esta computadora. ' +
+       'La app solo admite direcciones de este equipo, así que tu borrador no salió de aquí.';
+     dibujarRevisionGuardada(entrada);
+   }catch(e){
+-    nota.textContent = 'No se generó ninguna revisión: el modelo local no respondió. ' +
++    nota.textContent = enLaboratorio
++      ? 'No se generó ninguna revisión: el ' + LaboratorioIBERO.NOMBRE + ' no devolvió una revisión completa.'
++      : 'No se generó ninguna revisión: el modelo local no respondió. ' +
+       'Tu borrador no salió de esta computadora.';
+     salida.innerHTML = '<p>' + escaparHTML(explicarErrorIA(e)) + '</p>' +
+       '<p style="margin-top:8px;"><button class="btn-mini-config" onclick="generarRevisionSimulada()">Usar la revisión simulada mientras tanto</button></p>';
+@@ -9135,10 +9574,14 @@
+   if(datos.config.tesista){ md += 'Estudiante: ' + datos.config.tesista + '\n'; }
+   if(datos.config.titulo){ md += 'Título: ' + datos.config.titulo + '\n'; }
+   md += 'Exportado: ' + new Date().toLocaleString('es-MX') + '\n\n';
++  const conLaboratorio = datos.registroIA.filter(r => !r.simulada && r.motor === 'laboratorio').length;
+   md += 'Cada entrada corresponde a una revisión solicitada desde MentorIA. A cada revisión se le ' +
+-    'pidió señalar y preguntar, no redactar. Cuando intervino un modelo de lenguaje, se ejecutó de ' +
+-    'forma local: la aplicación solo admite direcciones de esta computadora, así que los borradores ' +
+-    'no salieron del equipo. Las entradas marcadas como revisión simulada no pasaron por ningún ' +
++    'pidió señalar y preguntar, no redactar. Cuando intervino un modelo local, se ejecutó en esta ' +
++    'computadora: para esos motores la aplicación solo admite direcciones de este equipo, así que esos ' +
++    'borradores no salieron de él.' +
++    (conLaboratorio ? ' Las revisiones con procedencia «' + LaboratorioIBERO.NOMBRE + '» se ejecutaron en ' +
++      'ese servidor institucional de la IBERO: el borrador revisado se envió allí, y a ningún otro servidor.' : '') +
++    ' Las entradas marcadas como revisión simulada no pasaron por ningún ' +
+     'modelo: las produjeron reglas locales de Apophenian sobre la extensión y la forma del texto.\n\n';
+ 
+   /* Sesión 59: el registro deja de ser una tabla de metadatos. Una constancia de
+@@ -9147,7 +9590,8 @@
+   md += '## Resumen\n\n';
+   const conModelo = datos.registroIA.filter(r => !r.simulada).length;
+   const simuladas = datos.registroIA.length - conModelo;
+-  md += '- Revisiones con modelo de lenguaje local: ' + conModelo + '\n';
++  md += '- Revisiones con modelo de lenguaje local: ' + (conModelo - conLaboratorio) + '\n';
++  if(conLaboratorio){ md += '- Revisiones con el ' + LaboratorioIBERO.NOMBRE + ': ' + conLaboratorio + '\n'; }
+   md += '- Revisiones simuladas con reglas locales: ' + simuladas + '\n';
+   const conNota = datos.registroIA.filter(r => (r.queHice || '').trim()).length;
+   md += '- Revisiones con anotación de qué se hizo con ellas: ' + conNota + ' de ' + datos.registroIA.length + '\n\n';
+@@ -9155,7 +9599,8 @@
+   md += '| Fecha | Apartado | Procedencia | Modelo | Palabras del borrador |\n|---|---|---|---|---|\n';
+   datos.registroIA.forEach(r => {
+     md += '| ' + formatoFechaHora(r.fecha) + ' | ' + r.apartado + ' | ' +
+-          (r.simulada ? 'reglas locales' : 'modelo local · ' + (r.motor || 'motor no anotado')) +
++          (r.simulada ? 'reglas locales' : (r.motor === 'laboratorio' ? LaboratorioIBERO.NOMBRE
++            : 'modelo local · ' + (r.motor || 'motor no anotado'))) +
+           ' | ' + (r.modelo || '') + ' | ' + r.palabras + ' |\n';
+   });
+ 
+@@ -9164,7 +9609,9 @@
+     md += '\n### ' + (i + 1) + '. ' + r.apartado + ' · ' + formatoFechaHora(r.fecha) + '\n\n';
+     md += '- **Procedencia:** ' + (r.simulada
+       ? 'revisión simulada con reglas locales de Apophenian, sin modelo de lenguaje'
+-      : 'modelo local ' + (r.modelo || 'sin nombre') + ' sobre ' + (r.motor || 'motor no anotado')) + '\n';
++      : (r.motor === 'laboratorio'
++          ? 'modelo ' + (r.modelo || 'sin nombre') + ' en el ' + LaboratorioIBERO.NOMBRE + ' (servidor institucional)'
++          : 'modelo local ' + (r.modelo || 'sin nombre') + ' sobre ' + (r.motor || 'motor no anotado'))) + '\n';
+     md += '- **Extensión del borrador revisado:** ' + r.palabras + ' palabras\n';
+     if(r.consigna){ md += '- **Qué se le pidió:** ' + r.consigna + '\n'; }
+     md += '\n';
+@@ -9208,8 +9655,8 @@
+   const nota = document.getElementById('notaRevisor');
+   if(nota){
+     nota.textContent = iaConfigurada()
+-      ? 'Esta es la revisión simulada de respaldo (el modelo local no respondió).'
+-      : 'Sin modelo conectado: la revisión se simula con reglas locales. Conecta Ollama o LM Studio en Configuración para una revisión de verdad: la app solo admite direcciones de esta computadora, así que tu texto no saldrá del equipo.';
++      ? 'Esta es la revisión simulada de respaldo (' + (datos.config.ia.motor === 'laboratorio' ? 'el laboratorio' : 'el modelo local') + ' no respondió).'
++      : 'Sin modelo conectado: la revisión se simula con reglas locales. Conecta Ollama o LM Studio en Configuración para una revisión de verdad sin que tu texto salga del equipo, o el ' + LaboratorioIBERO.NOMBRE + ', que lo envía a ese servidor institucional.';
+   }
+   const ap = datos.apartados[apartadoActual];
+   const salida = document.getElementById('revisorSalida');
+@@ -14494,13 +14941,15 @@
+   }
+ 
+   /* modelos y motores efectivamente usados, según el registro */
+-  const nombreMotor = m => (m === 'ollama' ? 'Ollama' : (m === 'lmstudio' ? 'LM Studio' : (m || 'motor local')));
++  const nombreMotor = nombreMotorIA;
+   const modelos = {};
+   const apartados = {};
+   /* E-13: una revisión simulada son reglas locales, sin modelo de lenguaje.
+      Contarla como modelo ejecutado era declarar un uso de IA que no ocurrió. */
+   let simuladas = 0;
++  let conLaboratorio = 0;
+   registro.forEach(r => {
++    if(!r.simulada && r.motor === 'laboratorio'){ conLaboratorio++; }
+     if(r.simulada){ simuladas++; }
+     else{
+       const clave = (r.modelo || 'modelo sin nombre') + ' · ' + nombreMotor(r.motor);
+@@ -14515,10 +14964,14 @@
+ 
+   xml += parr('Para la elaboración de este trabajo se utilizó MentorIA mayéutica, la función de ' +
+     'acompañamiento de Apophenian.' +
+-    (conModelo
+-      ? ' En ' + nRev(conModelo) + ' se usó un modelo de lenguaje que se ejecutó de forma local, en la ' +
++    (conModelo - conLaboratorio
++      ? ' En ' + nRev(conModelo - conLaboratorio) + ' se usó un modelo de lenguaje que se ejecutó de forma local, en la ' +
+         'computadora de quien escribe: los borradores no se enviaron a ningún servidor ni servicio en la nube.'
+       : '') +
++    (conLaboratorio
++      ? ' En ' + nRev(conLaboratorio) + ' se usó un modelo del ' + LaboratorioIBERO.NOMBRE + ', servidor ' +
++        'institucional de la IBERO, al que se enviaron los borradores revisados.'
++      : '') +
+     (simuladas
+       ? (conModelo
+           ? ' Además, ' + nRev(simuladas) + (simuladas === 1 ? ' fue simulada' : ' fueron simuladas')
+@@ -14527,7 +14980,8 @@
+       : ''));
+ 
+   if(listaModelos.length){
+-    xml += '<w:p><w:pPr><w:pStyle w:val="Titulo3"/></w:pPr><w:r><w:t>Modelo local utilizado</w:t></w:r></w:p>';
++    xml += '<w:p><w:pPr><w:pStyle w:val="Titulo3"/></w:pPr><w:r><w:t>' +
++      (conLaboratorio ? 'Modelos utilizados' : 'Modelo local utilizado') + '</w:t></w:r></w:p>';
+     listaModelos.forEach(m => {
+       xml += parr('· ' + m + ' (' + nRev(modelos[m]) + ')', 'Ficha');
+     });
