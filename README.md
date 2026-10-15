@@ -217,7 +217,11 @@ Esta versión constituye entra a pruebas reales cuyo propósito es explorar nuev
 
 [Prototipo](https://apophenian.netlify.app/apophenian)
 
-[Manual](https://apophenian.netlify.app/manual_apophenian#lmstudio)
+[Manual](https://apophenian.netlify.app/manual_apophenian)
+
+[Primeros pasos](https://apophenian.netlify.app/primeros-pasos)
+
+[Revisión compartida](https://apophenian.netlify.app/manual_apophenian#revision)
 
 
 
